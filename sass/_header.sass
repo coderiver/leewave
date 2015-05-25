@@ -1,0 +1,58 @@
+.header
+	background: $dark 
+	min-height: 140px
+.soc
+	font-size: 0
+	padding: 22px 0 26px 
+	&__link
+		display: inline-block
+		vertical-align: middle
+		margin-right: 3px
+		width: 32px
+		height: 32px
+		text-align: center
+		line-height: 30px
+		border: 1px solid rgba(#fff, .12)
+		border-radius: 50%
+		+tr(border .3s)
+		&:hover
+			border-color: #fff 
+			i
+				color: #fff 
+	i
+		display: inline-block
+		vertical-align: middle
+		color: #d4d4d2
+		+tr(color .3s) 
+		font-size: 14px
+
+.tel
+	display: inline-block
+	margin-top: 30px
+	font-size: 14px
+	color: #cfd5cb
+	+bold 
+	+tr(color .3s)
+	&:hover
+		color: #fff 
+
+.logo
+	position: absolute
+	left: 50%
+	top: 0
+	margin-left: -100px
+	width: 200px
+	height: 140px
+	text-align: center
+	+hide-text
+	.icon-logo
+		display: inline-block
+		margin-top: 17px
+		font-size: 150px
+		color: #fff 
+		line-height: .5
+	&__text
+		display: block
+		font-size: 13px
+		+bold
+		color: $green 

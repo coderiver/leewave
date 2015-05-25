@@ -47,35 +47,68 @@
 // p
 // 	+jpg(bla)
 
+@font-face
+	font-family: 'icomoon'
+	src: url('../fonts/icomoon.eot')
+	src: url('../fonts/icomoon.eot') format('embedded-opentype'), url('../fonts/icomoon.woff') format('woff'), url('../fonts/icomoon.ttf') format('truetype'),
+	font-weight: normal
+	font-style: normal
+=icon
+	font-family: 'icomoon'
 
+@font-face
+	font-family: 'WebSymbolsLigaRegular'
+	src: url('../fonts/websymbolsligaregular.eot')
+	src: url('../fonts/websymbolsligaregular.eot?#iefix') format('embedded-opentype'), url('../fonts/websymbolsligaregular.woff') format('woff'), url('../fonts/websymbolsligaregular.ttf') format('truetype'), url('../fonts/websymbolsligaregular.svg#WebSymbolsRegular') format('svg')
+
+=glyph
+	font-family: 'WebSymbolsLigaRegular'
+
+
++font(ProximaNovaBold, ProximaNovaBold)  
+=bold
+	font-family: "ProximaNovaBold", Arial, sans-serif 
+
++font(ProximaNovaExtrabold, ProximaNovaExtrabold)  
+=ebold
+	font-family: "ProximaNovaExtrabold", Arial, sans-serif 
+	
++font(ProximaNovaRegular, ProximaNovaRegular)  
+=reg
+	font-family: "ProximaNovaRegular", Arial, sans-serif 
+	
++font(ProximaNovaLight, ProximaNovaLight)  
+=light
+	font-family: "ProximaNovaLight", Arial, sans-serif 
+
+=pt
+	font-family: 'PT Serif', Arial, serif
+$light: #f1f3f2
+$dark: #303331
+$green: #87d18f
+$green_d: #7cc24d
 body
-	font-family: Arial, sans-serif 
-	font-size: 12px 
-	line-height: 1.4
-
-
+	font-size: 18px 
+	line-height: 1.3
+	+pt
+	font-weight: 400
+	background: $light 
+a
+	text-decoration: none
 // common blocks      
+.container
+	max-width: 970px
+.title
+	font-size: 11px
+	text-transform: uppercase
+	color: #3c3d41
+	letter-spacing: 2px  
+	+bold
+	&_white
+		color: #fff 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.glyph
+	+glyph
 
 
 

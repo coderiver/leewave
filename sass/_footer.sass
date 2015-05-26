@@ -5,7 +5,7 @@ $footer-gray: #878887
 	padding: 35px 0
 	.container
 		+clr
-	h2
+	.title
 		margin-bottom: 20px 
 .footer__logo
 	position: static
@@ -26,7 +26,7 @@ $footer-gray: #878887
 		position: absolute
 		top: 0
 		right: 0
-		border-right: 1px solid $footer-gray 
+		border-right: 1px solid $gray 
 		height: 200px 
 		
 		
@@ -42,7 +42,7 @@ $footer-gray: #878887
 		+reg
 	a
 		font-size: 13px
-		+transition(color .1s)
+		+transition(color .3s)
 		&:hover
 			color: #f7f7f7
 .footer__item_copy
@@ -54,7 +54,7 @@ $footer-gray: #878887
 		+bold
 		color: #585a59
 		
-.footer__item_subs_foo
+.created_by
 	padding-left: 43px 
 	position: relative
 	a
@@ -69,22 +69,23 @@ $footer-gray: #878887
 		span
 			border-bottom: 1px solid
 
-.footer__form
+.subscribe
 	+clr
 	font-size: 0
 	position: relative
 	margin-bottom: 35px 
-	input, button
+	.subscribe__input, .subscribe__button
 		height: 43px
 		display: block
-	input
+		+reg
+	.subscribe__input
 		background-color: #2f3030
 		padding-left: 20px
 		width: 100%
 		+border-radius(5px)  
 		color: #F7F7F7 
 		letter-spacing: 2px 
-	button
+	.subscribe__button
 		background-color: #8bd393
 		position: absolute
 		width: 45px

@@ -85,8 +85,17 @@
 	font-family: 'PT Serif', Arial, serif
 $light: #f1f3f2
 $dark: #303331
-$green: #87d18f
-$green_d: #7cc24d
+$green_l: #87d18f
+$green: #7cc24d
+$orange: #f38a3c
+$yellow: #e0ce90
+$violet: #ca96ba
+$blue: #9db2c3
+$gray: #ddd
+html
+	+selection
+		background: rgba($green, .7) 
+		color: #000 
 body
 	font-size: 18px 
 	line-height: 1.3
@@ -111,20 +120,82 @@ a
 	+glyph
 
 
+.title-h1
+	margin-bottom: 30px
+	font-size: 36px
+	color: #3c3d41
+	+ebold
+	line-height: 1
+	letter-spacing: -.4px
+.title-h2
+	margin: 0 0 40px 
+	font-weight: 400
+	font-size: 32px
+	color: #3b3d40
+	line-height: 1.3
+	letter-spacing: -.4px   
+.meta
+	display: block
+	font-size: 12px
+	line-height: 1.2
+	color: #838c8d 
+	&_it
+		font-style: italic
+		
+.text
+	margin: 40px 0
+	font-size: 18px
+	color: #666d70
+	line-height: 1.5
+	&_border
+		position: relative
+		padding-top: 45px
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 50%
+			margin-left: -290px
+			height: 1px
+			width: 580px
+			background: $gray
+.btn-wrap
+	text-align: center
+.btn
+	display: inline-block
+	padding: 19px 20px 17px
+	min-width: 230px
+	background: #3CA773
+	border-radius: 5px
+	color: #fff
+	text-transform: uppercase
+	+bold
+	font-size: 11px
+	letter-spacing: 2px 
+	line-height: 1 
+	text-align: center
+	+transition(background, opacity, .3s)
+	&:hover
+		background: #76c19d
+		opacity: 0.7 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.btn-simple
+	display: inline-block
+	padding: 19px 20px 17px
+	border: 1px solid $gray
+	min-width: 230px
+	background: #fff
+	border-radius: 5px
+	color: #3c3d41
+	text-transform: uppercase
+	+bold
+	font-size: 11px
+	letter-spacing: 2px 
+	line-height: 1 
+	text-align: center
+	+transition(color .3s)
+	&:hover
+		color: #bec4c0 
 
 
 

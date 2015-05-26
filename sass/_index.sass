@@ -1,1 +1,112 @@
-// Normally mainpage styles
+.slider
+	position: relative
+	margin-bottom: 95px
+	background: #fff 
+	overflow: hidden
+	opacity: 0
+	visibility: hidden
+	+tr(opacity .3s)
+	&.is-ready
+		opacity: 1
+		visibility: visible 
+	.slick-slider
+		position: relative
+		z-index: 1
+	&__item
+		height: 545px
+		+cover
+	&__nav
+		position: absolute
+		z-index: 2
+		top: 34px
+		right: 0
+		left: 0
+		text-align: center
+		font-size: 0
+		li
+			display: inline-block
+			vertical-align: top
+			margin: 0 30px
+			&.is-active,
+			&:hover
+				&.is-green
+					a
+						border-color: $green  
+				&.is-orange
+					a
+						border-color: $orange  
+				&.is-yellow
+					a
+						border-color: $yellow  
+				&.is-violet
+					a
+						border-color: $violet  
+				&.is-blue
+					a
+						border-color: $blue 
+			&.is-inactive
+				a
+					color: #ced4d0 
+		a
+			display: block
+			position: relative
+			padding: 3px 0 
+			border-bottom: 3px solid transparent
+			color: #262c28
+			font-size: 18px
+			+light 
+			+tr(border .3s)
+	&__info
+		padding-top: 135px
+	&__meta
+		font-size: 20px
+		+reg
+		color: #bac3bd 
+	&__title
+		margin: -4px 0 35px
+		font-size: 48px
+		line-height: 1
+		+bold
+		color: $green 
+	&__text
+		margin: 35px 0 45px 
+		font-size: 18px
+		color: #393939
+		+light 
+
+.cat
+	display: block
+	width: 228px
+	border-radius: 5px 
+	+tr(box-shadow .3s)
+	&:hover
+		box-shadow: 0 5px 21px rgba(#000, 0.3)
+	&__head
+		position: relative
+		height: 218px
+		background: #f9f9f9 
+		border-radius: 5px 5px 0 0
+		img
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+	&__body
+		height: 80px
+		+vertical
+		border-radius: 0 0 5px 5px
+		background: #fff 
+	&__in
+		display: inline-block
+		vertical-align: middle
+		width: 100%
+	title
+		margin-bottom: 10px
+
+
+.slider-cat
+	margin: 55px -20px 0
+	.slick-list
+		padding: 40px 0 
+	.cat
+		margin: 0 auto

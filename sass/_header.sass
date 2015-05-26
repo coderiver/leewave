@@ -76,23 +76,43 @@
 		color: $green 
 
 .btn-nav
+	background: transparent 
+	margin-top: 16px 
+	margin-left: 18px 
 	width: 25px
 	height: 18px  
 	position: relative
-	margin-top: 16px 
-	margin-left: 18px 
-	background-color: transparent 
-	border-top: 2px solid #fff
-	border-bottom: 2px solid  #fff
-	&:before
-		content: ''
+	+gpu
+	span
 		display: block
-		position: absolute
 		width: 25px
 		height: 2px 
-		background-color: #FFF 
-		top: 50%
-		margin-top: -1px  
+		background-color: #fff
+		+transition(1s)
+		&:before,
+		&:after
+			content: ''
+			position: absolute
+			display: block
+			width: 25px
+			height: 2px
+			background-color: #FFF   
+			+transform-origin(left)
+			+transition(transform .5s)
+		&:before
+			top: 0px
+		&:after
+			bottom: 0px
+	&.is-active
+		span
+			+transition(background .2s)
+			background-color: transparent
+			&:before 
+				+transform(rotate(41deg))
+			&:after
+				+transform(rotate(-41deg))
+
+
 
 .cart
 	+bold
@@ -113,3 +133,30 @@
 		font-size: 10px
 		color: #303331  
 		+border-radius(10px) 
+
+.menu
+	width: 100% 
+	display: none
+	background-color: rgba($dark, .9)
+	padding: 60px  0
+	position: absolute
+	z-index: 5 
+	+gpu
+	+clr
+	.title
+		margin-bottom: 24px 
+	.menu__links
+		a
+			color: #8c8d8d
+			+light
+			font-size: 18px 
+			margin-bottom: 13px 
+			display: block
+			+tr(color .3s)
+			&:hover
+				color: #fff 
+			
+		li
+			> ul li
+				display: block
+				margin-left: 20px 

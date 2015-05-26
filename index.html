@@ -30,7 +30,7 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-					<button class="btn-nav" type="button"></button>
+					<button class="btn-nav js-open-menu" type="button"><span></span></button>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right">
 					<a href="#" class="cart">
@@ -47,6 +47,58 @@
 			</a>
 		</div>
 	</div>
+
+	<div class="menu js-menu">
+		<div class="container">
+			<!-- <div class="col-lg-8"> -->
+				<div class="col-lg-2 col-lg-offset-2">
+					<div class="menu__item">
+						<div class="title title_white">СЕРИИ</div>
+						<ul class="menu__links">
+							<li><a href="#">Cappa Green</a></li>
+							<li><a href="#">Sophe Loo</a></li>
+							<li><a href="#">Florance</a></li>
+							<li><a href="#">Velvet</a></li>
+							<li><a href="#">SPA</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-lg-offset-1">
+					<div class="menu__item">
+						<div class="title title_white">КАТЕГОРИИ</div>
+						<ul class="menu__links">
+							<li><a href="#">Для лица</a></li>
+							<li><a href="#">Для тела</a></li>
+							<li><a href="#">Для волос</a></li>
+							<li><a href="#">Для рук</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-4 col-lg-offset-1">
+					<div class="menu__item">
+						<div class="title title_white">Разделы</div>
+						<ul class="menu__links">
+							<li><a href="#">Справочник ингредиентов</a>
+								<ul>
+									<li><a href="#">Основные ингредиенты</a></li>
+									<li><a href="#">Инновационные компоненты</a></li>
+									<li><a href="#">Инновационные компоненты</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Важное и интересное</a></li>
+							<li><a href="#">Партнерам</a></li>
+							<li><a href="#">Отзывы</a></li>
+							<li><a href="#">Социальная ответственность</a></li>
+							<li><a href="#">Сертификация</a></li>
+							<li><a href="#">Условия Заказа</a></li>
+						</ul>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</div>
+
+
 	<div class="slider">
 		<ul class="slider__nav js-slider-nav">
 			<li class="is-green is-active"><a href="#" data-slide="0">Cappa Green</a></li>		
@@ -226,6 +278,8 @@
 			</div>
 		</div>
 	</div>
+		
+		
 </div>
 <!-- END out-->
 <div class="footer">
@@ -296,6 +350,10 @@
 	</div>
 </div>
 <!-- load scripts -->
-<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+
+<script src="js/lib/head.js"></script>
+<script src="js/lib/jquery.js"></script>
+<script src="js/lib/slick.min.js"></script>
+<script src="js/common.js"></script>
 </body>
 </html>

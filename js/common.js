@@ -47,5 +47,11 @@ head.ready(function() {
 		$('.js-slider').slick('slickGoTo', index);
 		return false;
 	});
-	        
+//menu
+	 $('.js-open-menu').click(function(){
+	 	var $menu = $('.js-menu'),
+	 			$this = $(this);
+		 	$this.toggleClass('is-active');
+		 	$menu.stop().slideToggle('fast');
+	 })       
 });

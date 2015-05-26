@@ -1,11 +1,20 @@
 .header
 	background: $dark 
 	min-height: 140px
-	.logo__wrap
-		position: relative
-		overflow: hidden
-		height: 200px 
-		width: 100% 
+	// .logo
+	// 	&:before,
+	// 	&:after
+	// 		content: ''
+	// 		position: absolute
+	// 		width: 2000px
+	// 		height: 1px
+	// 		top: 50%
+	// 		margin-top: -1px
+	// 		background-color: #4a4c4a 
+	// 	&:before
+	// 		left: -2000px
+	// 	&:after
+	// 		right: -2000px
 
 .soc
 	font-size: 0
@@ -37,6 +46,7 @@
 	margin-top: 30px
 	font-size: 14px
 	color: #cfd5cb
+	letter-spacing: 3px 
 	+bold 
 	+tr(color .3s)
 	&:hover
@@ -57,8 +67,49 @@
 		font-size: 150px
 		color: #fff 
 		line-height: .5
+		
 	&__text
 		display: block
 		font-size: 13px
+		letter-spacing: 3px 
 		+bold
 		color: $green 
+
+.btn-nav
+	width: 25px
+	height: 18px  
+	position: relative
+	margin-top: 16px 
+	margin-left: 18px 
+	background-color: transparent 
+	border-top: 2px solid #fff
+	border-bottom: 2px solid  #fff
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		width: 25px
+		height: 2px 
+		background-color: #FFF 
+		top: 50%
+		margin-top: -1px  
+
+.cart
+	+bold
+	color: #cfd5cb 
+	+tr(color .3s)
+	font-size: 11px 
+	margin-top: 20px 
+	display: block
+	&:hover
+		color: #fff 
+	.cart__title
+		letter-spacing: 2px 
+		margin: 0 14px 0 18px  
+	.cart__info
+		display: inline-block
+		background-color: #87d18f
+		padding: 2px 7px 1px
+		font-size: 10px
+		color: #303331  
+		+border-radius(10px) 

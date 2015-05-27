@@ -1,32 +1,23 @@
 $gray-line: #4a4c4a
 .header
 	background: $dark 
-	min-height: 140px
+	.container
+		position: relative
+		overflow: hidden
+		min-height: 140px
 	.logo
 		&:before,
 		&:after
 			content: ''
 			position: absolute
-			width: 2000px
+			bottom: 60px
+			width: 500px
 			height: 1px
-			top: 50%
-			margin-top: -1px
-			background-color: $gray-line 
+			background: $gray-line 
 		&:before
-			left: -2000px
+			left: -500px
 		&:after
-			right: -2000px
-	.btn-nav
-		position: relative
-		&:after
-			content: ''
-			display: block
-			width: 1px
-			height: 71px
-			background-color: $gray-line
-			position: absolute
-			top: -27px 
-			right: -28px  
+			right: -500px 
 .soc
 	font-size: 0
 	padding: 22px 0 26px 
@@ -87,14 +78,22 @@ $gray-line: #4a4c4a
 		color: $green 
 
 .btn-nav
-	background: transparent 
-	margin: 16px 18px 0
-	width: 25px
-	height: 18px  
 	position: relative
-	+gpu
+	margin-left: -15px
+	background: none
+	width: 67px
+	height: 60px  
+	border-right: 1px solid $gray-line 
+	&:hover
+		span
+			&:before
+				+transform(translateY(-2px))
+			&:after
+				+transform(translateY(2px))
 	span
-		display: block
+		display: inline-block
+		vertical-align: middle
+		position: relative
 		width: 25px
 		height: 2px 
 		background-color: #fff
@@ -103,16 +102,16 @@ $gray-line: #4a4c4a
 		&:after
 			content: ''
 			position: absolute
-			display: block
+			left: 0
 			width: 25px
 			height: 2px
 			background-color: #FFF   
 			+transform-origin(left)
 			+transition(transform .5s)
 		&:before
-			top: 0px
+			top: -8px
 		&:after
-			bottom: 0px
+			bottom: -8px
 	&.is-active
 		span
 			+transition(background .2s)
@@ -125,19 +124,22 @@ $gray-line: #4a4c4a
 
 
 .cart
+	display: inline-block
+	margin-right: -15px
+	border-left: 1px solid $gray-line 
+	width: 185px
+	height: 60px
+	line-height: 60px
 	+bold
 	color: #cfd5cb 
 	+tr(color .3s)
 	font-size: 11px 
-	margin-top: 20px 
-	display: block
 	&:hover
 		color: #fff 
 	.cart__title
 		letter-spacing: 2px 
 		margin: 0 14px 0 18px  
 	.cart__info
-		display: inline-block
 		background-color: #87d18f
 		padding: 2px 7px 1px
 		font-size: 10px

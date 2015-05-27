@@ -1,21 +1,32 @@
+$gray-line: #4a4c4a
 .header
 	background: $dark 
 	min-height: 140px
-	// .logo
-	// 	&:before,
-	// 	&:after
-	// 		content: ''
-	// 		position: absolute
-	// 		width: 2000px
-	// 		height: 1px
-	// 		top: 50%
-	// 		margin-top: -1px
-	// 		background-color: #4a4c4a 
-	// 	&:before
-	// 		left: -2000px
-	// 	&:after
-	// 		right: -2000px
-
+	.logo
+		&:before,
+		&:after
+			content: ''
+			position: absolute
+			width: 2000px
+			height: 1px
+			top: 50%
+			margin-top: -1px
+			background-color: $gray-line 
+		&:before
+			left: -2000px
+		&:after
+			right: -2000px
+	.btn-nav
+		position: relative
+		&:after
+			content: ''
+			display: block
+			width: 1px
+			height: 71px
+			background-color: $gray-line
+			position: absolute
+			top: -27px 
+			right: -28px  
 .soc
 	font-size: 0
 	padding: 22px 0 26px 
@@ -77,8 +88,7 @@
 
 .btn-nav
 	background: transparent 
-	margin-top: 16px 
-	margin-left: 18px 
+	margin: 16px 18px 0
 	width: 25px
 	height: 18px  
 	position: relative

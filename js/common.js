@@ -53,5 +53,24 @@ head.ready(function() {
 	 			$this = $(this);
 		 	$this.toggleClass('is-active');
 		 	$menu.stop().slideToggle('fast');
-	 })       
+	 });
+
+	// $('.js-slider-promo').slick({
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	arrows: false,
+	// 	infinite: false,
+	// 	asNavFor: '.js-slider-vertical',
+	// 	vertical: true
+	// });
+	$('.js-slider-vertical').slick({
+		slidesToShow: 5,
+		infinite: false,
+		slidesToScroll: 1,
+		arrows: false,
+		//asNavFor: '.js-slider-promo',
+		//focusOnSelect: true,
+		vertical: true,
+		verticalSwiping: true
+	}); 
 });

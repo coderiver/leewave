@@ -1,66 +1,138 @@
 // footer.html
 $footer-gray: #878887
 .footer
-	background-color: $dark
-	padding: 35px 0
-	.container
-		+clr
+	padding: 40px 0 
+	background: $dark
+	color: #9b9d9c
+	overflow: hidden
+	+r(767)
+		padding: 0
 	.title
-		margin-bottom: 20px 
-.footer__logo
-	position: static
-	margin-left: 0
-	.logo__text
-		display: inline-block
-		vertical-align: top
-		letter-spacing: 1px 
-	.icon-logo
-		font-size: 92px 
-.footer__item
-	+clr
-	vertical-align: top
-	position: relative
-	&:after
-		content: ''
+		margin-bottom: 20px
+	.container
+		+r(767)
+			max-width: 100%
+			padding: 0
+		> .row
+			div
+				&:last-child
+					.footer__item
+						&:after
+							display: none
+				&:nth-child(2)
+					.footer__item
+						+r(1023)
+							&:after
+								display: none
+			> div
+				margin-bottom: 20px
+				+r(767)
+					margin-bottom: 0
+	&__item
+		position: relative
+		+r(767)
+			text-align: center
+			padding: 25px 20px
+			overflow: hidden
+			border-bottom: 1px solid #4d4f53 
+		&:after
+			content: ""
+			position: absolute
+			right: -10px
+			top: 0
+			height: 200px
+			width: 1px
+			background: #4d4f53  
+			+r(767)
+				display: none
+		.footer__logo
+			color: $mint 
+	&__logo	
 		display: block
-		position: absolute
-		top: 0
-		right: 0
-		border-right: 1px solid #4d4f53 
-		height: 200px 
-		
-		
-	li
-		padding: 5px 0 
-		&:first-child
-			padding-top: 0
-		a i
-			margin-right: 19px
-			font-size: 16px 
-	a,p
-		color: $footer-gray
-		+reg
-	a
-		font-size: 13px
-		+transition(color .3s)
-		&:hover
-			color: #f7f7f7
-.footer__item_copy
-	p
-		font-size: 13px 
-.footer__item_brands
-	li a
-		display: block
+		margin-bottom: 25px
+		font-size: 11px
+		line-height: 1
 		+bold
-		color: #585a59
-		
-.created_by
+		+r(767)
+			margin-bottom: 0
+		strong
+			display: block
+			margin-bottom: -2px
+			font-size: 25px
+			color: #fff 
+		span
+			display: block
+			margin-bottom: 26px
+			color: #999
+			font-size: 18px
+	&__categs
+		font-size: 13px
+		+bold
+		text-transform: uppercase
+		li
+			margin-bottom: 16px
+			&.is-inactive
+				color: rgba(#f7f7f7,.2)
+				pointer-events: none
+				a
+					color: rgba(#f7f7f7,.2)  
+		a
+			color: #f7f7f7
+			+tr(color .3s)
+			&:hover
+				color: #cbc9c9 
+	&__nav
+		+reg
+		font-size: 13px
+		li
+			margin-bottom: 18px
+		a
+			color: #acadad
+			+tr(color .3s)
+			&:hover
+				color: #777
+	&__soc
+		+bold
+		font-size: 13px
+		li
+			margin-bottom: 14px
+		a
+			color: #acadad
+			+tr(color .3s)
+			&:hover
+				color: #777
+				i
+					color: #777 
+		i
+			font-size: 15px
+			color: #828c8e 
+			margin-right: 18px
+			+tr(color .3s)
+	.soc
+		padding: 0
+		&__link
+			margin-right: 16px
+			&:last-child
+				margin-right: 0
+.copyright
+	font-size: 13px
+	+r(767)
+		margin-bottom: 20px
+.created-by
 	padding-left: 43px 
 	position: relative
+	+reg
+	+r(767)
+		display: inline-block
+		text-align: left
 	a
 		display: inline-block
-		font-size: 11px 
+		font-size: 12px 
 		line-height: 1.3em 
+		color: #9b9999 
+		+tr(color .3s)
+		&:hover
+			color: #777
 		i
 			position: absolute
 			left: 0
@@ -74,38 +146,54 @@ $footer-gray: #878887
 	font-size: 0
 	position: relative
 	margin-bottom: 35px 
-	.subscribe__input, .subscribe__button
+	+r(767)
+		padding-bottom: 25px
+		margin-bottom: 25px
+	&:before
+		content: ""
+		display: none
+		position: absolute
+		bottom: 0
+		left: -20px
+		right: -20px
+		height: 1px
+		background: #4d4f53 
+		+r(767)
+			display: block  
+	&__in
+		+r(767)
+			position: relative
+			width: 71%
+			margin: 0 auto 
+		+r(640)
+			width: 80%
+	&__input, 
+	&__button
 		height: 43px
 		display: block
 		+reg
-	.subscribe__input
-		background-color: #2f3030
+	&__input
+		background: #2f3030
 		padding-left: 20px
 		width: 100%
-		+border-radius(5px)  
-		color: #F7F7F7 
-		letter-spacing: 2px 
-	.subscribe__button
-		background-color: #8bd393
+		border-radius: 5px
+		letter-spacing: .4px
+		color: #fff 
+		+reg
+		font-size: 14px
+		+placeholder
+			color: #878787 
+	&__button
+		background: $mint
 		position: absolute
 		width: 45px
 		top: 0
 		right: 0 
-		+border-top-right-radius(5px)
-		+border-bottom-right-radius(5px)
+		border-radius: 0 5px 5px 0 
+		+tr(background .3s)
+		&:hover
+			background: $green 
 		i
-			font-style: normal
+			vertical-align: middle
 			color: #fff 
-			font-size: 25px  
-
-.footer__item_soc
-	padding-left: 20% 
-	a
-		+bold
-
-.footer
-	.row
-		>div
-			&:last-child
-				.footer__item:after
-					display: none
+			font-size: 17px  

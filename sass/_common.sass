@@ -85,7 +85,6 @@
 	font-family: 'PT Serif', Arial, serif
 $light: #f1f3f2
 $dark: #303331
-$green_l: #87d18f
 $green: #7cc24d
 $orange: #f38a3c
 $yellow: #e0ce90
@@ -93,6 +92,7 @@ $violet: #ca96ba
 $blue: #9db2c3
 $rose: #ea8bff
 $gray: #ddd
+$mint: #87d18f
 html
 	+selection
 		background: rgba($green, .7) 
@@ -103,11 +103,81 @@ body
 	+pt
 	font-weight: 400
 	background: $light 
+	&.is-fixed-header
+		.out
+			padding-top: 60px
+			+r(1023)
+				padding-top: 50px
+		.header
+			position: fixed
+			left: 0
+			top: 0
+			right: 0
+			z-index: 10
+			.container
+				min-height: 60px
+				+r(1023)
+					min-height: 50px
+			.row
+				&:first-child
+					display: none
+			.logo
+				height: 60px
+				+r(1023)
+					height: 50px
+				&:before,
+				&:after,
+				&__text,
+				.icon-logo
+					display: none
+				.icon-logo-small
+					display: inline-block
+			.cart
+				width: 115px
+				text-align: center
+				&__title
+					display: none
+		.menu
+			position: fixed
+			top: 60px
+			max-height: 100%
+			overflow-y: auto
+		.nav
+			+r(1023)
+				top: 50px
+		.btn-menu
+			+r(1023)
+				height: 50px
+		.cart
+			+r(1023)
+				height: 50px
+				line-height: 50px
+		.icon-logo-small
+			+r(1023)
+				margin-top: 11px
+				font-size: 30px
 a
 	text-decoration: none
-// common blocks      
+// common blocks    
+.row-xs_flex
+	+r(767)
+		+display-flex
+		+flex-direction(column)
+	.order-2
+		+r(767)
+			+order(2)
+	.order-1
+		+r(767)
+			+order(1)
+.out
+	+r(1023)
+		padding-top: 100px
 .container
-	max-width: 970px
+	//max-width: 970px
+	&_no-pad
+		padding: 0
+		+r(1023)
+			padding: 0 15px 
 .title
 	font-size: 11px
 	text-transform: uppercase
@@ -128,6 +198,9 @@ a
 	+ebold
 	line-height: 1
 	letter-spacing: -.4px
+	+r(767)	
+		margin-bottom: 18px
+		font-size: 22px
 .title-h2
 	margin: 0 0 40px 
 	font-weight: 400
@@ -135,6 +208,9 @@ a
 	color: #3b3d40
 	line-height: 1.3
 	letter-spacing: -.4px   
+	+r(767)
+		margin-bottom: 20px
+		font-size: 22px
 .meta
 	display: block
 	font-size: 12px
@@ -148,6 +224,9 @@ a
 	font-size: 18px
 	color: #666d70
 	line-height: 1.5
+	+r(767)
+		font-size: 14px
+		margin: 12px 0 
 	&_border
 		position: relative
 		padding-top: 45px
@@ -160,6 +239,9 @@ a
 			height: 1px
 			width: 580px
 			background: $gray
+			+r(640)
+				width: 80%
+				margin-left: -45%
 .btn-wrap
 	text-align: center
 .btn
@@ -195,6 +277,8 @@ a
 	line-height: 1 
 	text-align: center
 	+transition(color .3s)
+	+r(767)
+		padding: 17px 20px 15px 
 	&:hover
 		color: #bec4c0 
 

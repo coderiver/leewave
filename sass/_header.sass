@@ -18,6 +18,31 @@ $gray-line: #4a4c4a
 			left: -500px
 		&:after
 			right: -500px 
+	+r(1023)
+		position: fixed
+		left: 0
+		top: 0
+		right: 0
+		z-index: 10
+		.container
+			min-height: 100px
+		.row
+			&:first-child
+				display: none
+		.logo
+			height: 100px
+			&:before,
+			&:after,
+			&__text,
+			.icon-logo
+				display: none
+			.icon-logo-small
+				display: inline-block
+		.cart
+			width: 115px
+			text-align: center
+			&__title
+				display: none
 .soc
 	font-size: 0
 	padding: 22px 0 26px 
@@ -53,7 +78,49 @@ $gray-line: #4a4c4a
 	+tr(color .3s)
 	&:hover
 		color: #fff 
-
+.nav
+	display: none
+	position: fixed
+	top: 100px
+	left: 0
+	right: 0
+	z-index: 10
+	max-height: 100%
+	overflow-y: auto
+	background: #303331 
+	text-align: center
+	box-shadow: 0 5px 21px rgba(0, 0, 0, 0.32)
+	li
+		border-top: 1px solid #4f5250
+		&:first-child
+			border-top: 0
+	a
+		display: block
+		color: #cfd5cb
+		+tr(color .3s)
+		&:hover
+			color: #fff 
+	&__tel
+		letter-spacing: 2px 
+		a
+			height: 50px
+			line-height: 50px
+			+bold
+			font-size: 9px
+	&__categ
+		a
+			height: 40px
+			line-height: 40px
+			+bold
+			font-size: 14px
+			color: #fff 
+	&__link
+		a
+			height: 40px
+			line-height: 40px
+			+reg
+			font-size: 13px
+			
 .logo
 	position: absolute
 	left: 50%
@@ -69,35 +136,43 @@ $gray-line: #4a4c4a
 		font-size: 150px
 		color: #fff 
 		line-height: .5
-		
+	.icon-logo-small
+		display: none
+		margin-top: 11px
+		font-size: 35px
+		color: #fff 
+		+r(1023)
+			margin-top: 25px
+			font-size: 60px
 	&__text
-		display: block
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 15px
 		font-size: 13px
+		line-height: 1.3
 		letter-spacing: 3px 
 		+bold
-		color: $green 
+		color: $mint
 
-.btn-nav
+.btn-menu
 	position: relative
 	margin-left: -15px
 	background: none
 	width: 67px
 	height: 60px  
 	border-right: 1px solid $gray-line 
-	&:hover
-		span
-			&:before
-				+transform(translateY(-2px))
-			&:after
-				+transform(translateY(2px))
+	+tr(background .3s)
+	+r(1023)
+		height: 100px
 	span
 		display: inline-block
 		vertical-align: middle
 		position: relative
 		width: 25px
 		height: 2px 
-		background-color: #fff
-		+transition(1s)
+		background: #fff
+		+transition(background .2s)
 		&:before,
 		&:after
 			content: ''
@@ -106,20 +181,27 @@ $gray-line: #4a4c4a
 			width: 25px
 			height: 2px
 			background-color: #FFF   
-			+transform-origin(left)
-			+transition(transform .5s)
+			+transition(transform, top, bottom, .2s)
 		&:before
 			top: -8px
 		&:after
 			bottom: -8px
 	&.is-active
+		+r(1023)
+			background: #fff 
 		span
-			+transition(background .2s)
+			+transition(none)
 			background-color: transparent
 			&:before 
-				+transform(rotate(41deg))
+				+transform(rotate(45deg))
+				top: 0
+				+r(1023)
+					background: #000 
 			&:after
-				+transform(rotate(-41deg))
+				+transform(rotate(-45deg))
+				bottom: 0
+				+r(1023)
+					background: #000 
 
 
 
@@ -133,7 +215,10 @@ $gray-line: #4a4c4a
 	+bold
 	color: #cfd5cb 
 	+tr(color .3s)
-	font-size: 11px 
+	font-size: 11px
+	+r(1023)
+		height: 100px
+		line-height: 100px 
 	&:hover
 		color: #fff 
 	.cart__title
@@ -145,16 +230,24 @@ $gray-line: #4a4c4a
 		font-size: 10px
 		color: #303331  
 		+border-radius(10px) 
-
+	.icon-cart
+		margin-right: 5px
+		font-size: 15px
 .menu
-	width: 100% 
-	display: none
-	background-color: rgba($dark, .9)
-	padding: 60px  0
 	position: absolute
+	left: 0
+	right: 0
+	top: 140px
 	z-index: 5 
-	+gpu
+	display: none
+	background: rgba($dark, .9)
+	padding: 60px  0
 	+clr
+	+r(1023)
+		position: fixed
+		top: 60px
+		max-height: 100%
+		overflow-y: auto
 	.title
 		margin-bottom: 24px 
 	.menu__links

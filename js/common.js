@@ -186,6 +186,7 @@ head.ready(function() {
 		     breakpoint: 767,
 		     settings: {
 		       dots: true,
+		       arrows: false,
 		       slidesToShow: 1
 		     }
 		   }

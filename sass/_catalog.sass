@@ -1,12 +1,30 @@
 //catalog.html
+.product-wrap
+	margin-top: 20px 
+	.container
+		padding-right: 10px
+		+r(1023)
+			padding-right: 25px
+		+r(480)
+			padding: 0 15px 
+	.product
+		margin-right: -10px
+		+r(480)
+			margin-right: 0
+	.col-xs-6
+		+r(480)
+			float: none
+			width: 100% !important
+	
 .product
-	margin-top: 30px 
-.product__item
 	padding: 10px 10px 20px
 	background-color: #FFF
 	border-radius: 5px  
 	margin-bottom: 20px 
 	+clr
+	+tr(box-shadow .3s)
+	&:hover
+		box-shadow: 0 5px 21px rgba(#000, 0.3)
 	.product__price
 		text-align: center
 	.badge
@@ -37,17 +55,28 @@
 	&.is-yellow
 		a
 			background: $yellow  
-		
 
+.product__img
+	display: block
+	height: 150px
+	overflow: hidden
+	img
+		max-width: 100%
+		max-height: 100%
 .product__main
 	margin-top: 40px 
 
 .product__name
-	margin-top: 25px 
-	p
-		font-size: 15px 
-		color: #3A3D3F 
-		+bold
+	display: inline-block
+	margin-top: 23px 
+	font-size: 15px 
+	color: #3A3D3F 
+	height: 40px
+	overflow: hidden
+	+bold
+	+tr(color .3s)
+	&:hover
+		color: $green 
 .product__info
 	margin-top: 5px 
 	p
@@ -108,23 +137,42 @@
 	&:hover
 		opacity: 1 
 		
-.slider2
+.slider-prod
 	margin-top: 20px
-.slider2__in
+	+r(767)
+		margin-bottom: 60px
+.slider-prod__in
 	background: #FFF 
+.slider-prod__item
+	min-height: 255px
+	+cover
+	+r(767)
+		background: none !important
 .navi
 	height: 60px
 	background: #FFF 
 	border-radius: 5px 5px 0 0
 	text-align: center
 	position: relative
-	font-size: 0
+	+r(1023)
+		text-align: left
+	+r(767)
+		height: auto
+		padding: 20px 0 15px 
 	ul
 		font-size: 0
+		+r(1023)
+			padding: 0 15px 
+		+r(767)
+			padding-top: 40px
 	li
 		display: inline-block
 		padding: 20px 0 18px 
 		position: relative
+		+r(767)
+			padding: 5px 0 
+		+r(640)
+			display: block
 		a
 			+bold
 			font-size: 10px
@@ -134,6 +182,11 @@
 			line-height: 1em
 			padding: 6px 30px
 			border-radius: 20px
+			+r(1023)
+				padding: 6px 15px 
+			+r(767)
+				padding: 7px 10px 6px
+				letter-spacing: 1px  
 		&.is-active
 			a
 				background: #9F9F9F 
@@ -143,41 +196,61 @@
 				position: absolute
 				bottom: 0
 				+arr(20px, 20px, #c2d1d1, t )
-
+				+r(767)
+					display: none
 .navi__form
 	position: absolute
 	right: 15px
 	top: 50%
 	margin-top: -15px 
 	width: 180px 
+	+r(767)
+		left: 15px
+		margin-top: 0
+		top: 15px
+		width: auto
 .search
 	display: block
 	width: 100% 
 	background: #eee 
 	height: 30px
 	border-radius: 17px
-	padding-left: 20px  
+	padding: 0 30px 0 15px
 	+reg
-	font-size: 12px 
+	font-size: 13px 
+	+tr(background .3s)
+	&:focus
+		background: #f4f4f4 
 .btn-search
 	position: absolute
-	right: 10px 
-	top: 50%
-	margin-top: -7px  
-.slider2__info
+	right: 0
+	top: 0
+	padding-left: 5px
+	width: 30px
+	height: 30px
+	background: none
+	text-align: left
+	i
+		font-size: 13px
+		color: #889294 
+.slider-prod__info
 	padding: 30px 0
 	font-size: 0
-	  
-.slider2__header
+	+r(1023)
+		padding: 20px 0 
+.slider-prod__header
 	+ebold
 	color: #3c3d41
 	font-size: 52px
-.slider2__text
+	+r(1023)
+		font-size: 30px
+.slider-prod__text
 	+pt
 	font-size: 14px 
 	color: #4D4C4C 
 	margin: 20px 0
-	
+	+r(1023)
+		margin: 10px 0 
 .btn-out-noicon
 	padding:  10px 35px 9px
 .btn-out-dark	

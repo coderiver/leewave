@@ -140,14 +140,24 @@
 .slider-prod
 	margin-top: 20px
 	+r(767)
-		margin-bottom: 60px
+		padding-bottom: 60px
+	.container_no-pad
+		+r(1023)
+			padding: 0
+	&_article
+		.slider-prod__item
+			border-radius: 0
 .slider-prod__in
 	background: #FFF 
 .slider-prod__item
 	min-height: 255px
 	+cover
+	border-radius: 0 0 5px 5px  
 	+r(767)
-		background: none !important
+		background-image: none !important
+		background-color: #fff
+	.slider__img 
+		margin: 0 -15px 
 .navi
 	height: 60px
 	background: #FFF 

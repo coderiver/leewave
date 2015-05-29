@@ -176,6 +176,39 @@ head.ready(function() {
 	$(window).scroll(function(){
 		fixHeader();
 	});
+	//////////////////
+	var configSlider2 = {
+		slidesToShow: 1,
+		dots: false,
+		arrows: true,
+		responsive: [
+		   {
+		     breakpoint: 767,
+		     settings: {
+		       dots: true,
+		       slidesToShow: 1
+		     }
+		   }
+		]
+	}
+	$('.js-slider2').on('init', function(slick) {
+		  setTimeout(function(){
+		  	$('.slider2').addClass("is-ready");
+		  },200);
+	});
+	$(".js-slider2").slick(configSlider2);
 
+	
+	$('.js-slider2').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+		$('.js-slider2-nav li').removeClass("is-active");
+		$('.js-slider2-nav a[data-slide="'+nextSlide+'"]').parent().addClass("is-active");
+	});
 
+	$(".js-slider2-nav a").on("click", function(){
+		var index = $(this).attr("data-slide");
+		$(".js-slider2-nav li").removeClass("is-active");
+		$(this).parent().addClass("is-active");
+		$('.js-slider2').slick('slickGoTo', index);
+		return false;
+	});
 });

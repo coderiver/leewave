@@ -1,0 +1,452 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>basket</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+</head>
+<body class="is-white">
+<!-- BEGIN  out-->
+<div class="out">
+	<div class="header js-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<div class="soc">
+						<a href="#" class="soc__link"><i class="icon-soc-vk"></i></a>
+						<a href="#" class="soc__link"><i class="icon-soc-fb"></i></a>
+						<a href="#" class="soc__link"><i class="icon-soc-tw"></i></a>
+						<a href="#" class="soc__link"><i class="icon-soc-od"></i></a>
+						<a href="#" class="soc__link"><i class="icon-soc-ig"></i></a>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+					<a class="tel" href="tel:+7 495 722-34-55">+7 495 722-34-55</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+					<button class="btn-menu js-open-menu" type="button"><span></span></button>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+					<a href="#" class="cart">
+						<i class="icon-cart"></i>
+						<span class="cart__title">КОРЗИНА</span>
+						<span class="cart__info">199</span>
+					</a>
+				</div>
+			</div>
+			<a href="#" class="logo">
+				Leewave ecocosmetics
+				<i class="icon-logo"></i>
+				<i class="icon-logo-small"></i>
+				<span class="logo__text">blessed by nature</span>
+			</a>
+		</div>
+	</div>
+
+	<div class="menu js-menu hidden-sm">
+		<div class="container">
+			<div class="col-lg-2 col-md-2 col-lg-offset-2">
+				<div class="menu__item">
+					<div class="title title_white">СЕРИИ</div>
+					<ul class="menu__links">
+						<li><a href="#">Cappa Green</a></li>
+						<li><a href="#">Sophe Loo</a></li>
+						<li><a href="#">Florance</a></li>
+						<li><a href="#">Velvet</a></li>
+						<li><a href="#">SPA</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-2 col-lg-offset-1">
+				<div class="menu__item">
+					<div class="title title_white">КАТЕГОРИИ</div>
+					<ul class="menu__links">
+						<li><a href="#">Для лица</a></li>
+						<li><a href="#">Для тела</a></li>
+						<li><a href="#">Для волос</a></li>
+						<li><a href="#">Для рук</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-lg-offset-1">
+				<div class="menu__item">
+					<div class="title title_white">Разделы</div>
+					<ul class="menu__links">
+						<li><a href="#">Справочник ингредиентов</a>
+							<ul>
+								<li><a href="#">Основные ингредиенты</a></li>
+								<li><a href="#">Инновационные компоненты</a></li>
+								<li><a href="#">Инновационные компоненты</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Важное и интересное</a></li>
+						<li><a href="#">Партнерам</a></li>
+						<li><a href="#">Отзывы</a></li>
+						<li><a href="#">Социальная ответственность</a></li>
+						<li><a href="#">Сертификация</a></li>
+						<li><a href="#">Условия Заказа</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<ul class="nav js-menu hidden-lg hidden-md">
+		<li class="nav__tel">
+			<a href="tel:+7 495 722-34-55">+7 495 722-34-55</a>
+		</li>
+		<li class="nav__categ" style="background: #f48a3c;">
+			<a href="#">Sophe Loo</a>
+		</li>
+		<li class="nav__categ" style="background: #7dc24d;">
+			<a href="#">Cappa Green</a>
+		</li>
+		<li class="nav__link">
+			<a href="#">О компании</a>
+		</li>
+		<li class="nav__link">
+			<a href="#">Сертификация LW</a>
+		</li>
+		<li class="nav__link">
+			<a href="#">Доступы и оплата</a>
+		</li>
+		<li class="nav__link">
+			<a href="#">Контакты</a>
+		</li>
+		<li class="nav__link">
+			<a href="#">Справочник</a>
+		</li>
+	</ul>
+
+
+	<div class="basket-wrap">
+		<div class="container container_no-pad">
+			<div class="row">
+			<div class="basket">
+				<div class="basket__top">
+					<div class="basket__header">Ваша корзина</div>
+					<div class="basket__info">Проверьте состав своей покупки и перейдите к оформлению заказа.</div>
+				</div>
+			</div>
+
+			<!-- BEGIN basket__table  -->
+			<div class="col-lg-12">
+				<div class="table basket__table">
+					<div class="table__header">
+						<ul>
+							<div class="col-lg-5">
+								<li>Наименование</li>
+							</div>
+							<div class="col-lg-2">
+								<li>Стоимость</li>
+							</div>
+							<div class="col-lg-2">
+								<li>Кол-во, шт</li>
+							</div>
+							<div class="col-lg-2">
+								<li>Сумма</li>
+							</div>
+							<div class="col-lg-1">
+								<li>Удалить</li>
+							</div>
+						</ul>
+					</div>
+					<div class="table__body">
+						<ul>
+							<li class="col-lg-5">
+								<a class="product__img">
+									<img src="img/product1-min.png">
+								</a>
+								<div class="product__text col-lg-offset-1">
+									<div class="product__info"><p>Крем для лица</p></div>
+									<a class="product__name" href="#">Regeneration Night, 25 мл</a>
+									<div class="badge is-green"><a href="#">CAPPA GREEN</a></div>
+								</div>
+							</li>
+							<li class="col-lg-2">
+								<div class="price">1 800 <i class="rub">a</i></div>
+							</li>
+							<li class="col-lg-2">
+									<div class="number js-number" data-max-number="100">
+									   <button class="number__minus js-minus-number" type="button"></button>
+									  <input type="text" class="number__input" value="1">
+									  <button class="number__plus js-plus-number" type="button"></button>
+									</div>
+							</li>
+							<li class="col-lg-2">
+								<div class="sum">1 800 <i class="rub">a</i></div> 
+							</li>
+							<li class="col-lg-1 text-right">
+								<a class="close"></a>
+							</li>
+						</ul>
+
+						<ul>
+							<li class="col-lg-5">
+								<a class="product__img">
+									<img src="img/product2-min.png">
+								</a>
+								<div class="product__text col-lg-offset-1">
+									<div class="product__info"><p>Шампунь</p></div>
+									<a class="product__name" href="#">Freshness daily, 30 мл</a>
+									<div class="badge is-orange"><a href="#">CAPPA GREEN</a></div>
+								</div>
+							</li>
+							<li class="col-lg-2">
+								<div class="price">2 500 <i class="rub">a</i></div>
+							</li>
+							<li class="col-lg-2">
+									<div class="number js-number" data-max-number="100">
+									   <button class="number__minus js-minus-number" type="button"></button>
+									  <input type="text" class="number__input" value="2">
+									  <button class="number__plus js-plus-number" type="button"></button>
+									</div>
+							</li>
+							<li class="col-lg-2">
+								<div class="sum">5 000 <i class="rub">a</i></div> 
+							</li>
+							<li class="col-lg-1 text-right">
+								<a class="close"></a>
+							</li>
+						</ul>
+						<ul>
+							<li class="col-lg-5">
+								<a class="product__img">
+									<img src="img/product3-min.png">
+								</a>
+								<div class="product__text col-lg-offset-1">
+									<div class="product__info"><p>Гель для душа</p></div>
+									<a class="product__name" href="#">Nutrition &amp; Repair, 300 мл</a>
+									<div class="badge is-green"><a href="#">CAPPA GREEN</a></div>
+								</div>
+							</li>
+							<li class="col-lg-2">
+								<div class="price">3 250 <i class="rub">a</i></div>
+							</li>
+							<li class="col-lg-2">
+									<div class="number js-number" data-max-number="100">
+									   <button class="number__minus js-minus-number" type="button"></button>
+									  <input type="text" class="number__input" value="1">
+									  <button class="number__plus js-plus-number" type="button"></button>
+									</div>
+							</li>
+							<li class="col-lg-2">
+								<div class="sum">3 250 <i class="rub">a</i></div> 
+							</li>
+							<li class="col-lg-1 text-right">
+								<a class="close"></a>
+							</li>
+						</ul>
+						<ul>
+							<li class="col-lg-5">
+								<a class="product__img">
+									<img src="img/product4-min.png">
+								</a>
+								<div class="product__text col-lg-offset-1">
+									<div class="product__info"><p>Крем для рук</p></div>
+									<a class="product__name" href="#">Soft &amp; Protect, 30 мл</a>
+									<div class="badge is-green"><a href="#">CAPPA GREEN</a></div>
+								</div>
+							</li>
+							<li class="col-lg-2">
+								<div class="price">2 500 <i class="rub">a</i></div>
+							</li>
+							<li class="col-lg-2">
+									<div class="number js-number" data-max-number="100">
+									   <button class="number__minus js-minus-number" type="button"></button>
+									  <input type="text" class="number__input" value="1">
+									  <button class="number__plus js-plus-number" type="button"></button>
+									</div>
+							</li>
+							<li class="col-lg-2">
+								<div class="sum">2 500 <i class="rub">a</i></div> 
+							</li>
+							<li class="col-lg-1 text-right">
+								<a class="close"></a>
+							</li>
+						</ul>
+						<ul>
+							<li class="col-lg-5">
+								<a class="product__img">
+									<img src="img/product1-min.png">
+								</a>
+								<div class="product__text col-lg-offset-1">
+									<div class="product__info"><p>Крем для лица</p></div>
+									<a class="product__name" href="#">Regeneration Night, 25 мл</a>
+									<div class="badge is-orange"><a href="#">SOPHE LOO</a></div>
+								</div>
+							</li>
+							<li class="col-lg-2">
+								<div class="price">1 800 <i class="rub">a</i></div>
+							</li>
+							<li class="col-lg-2">
+									<div class="number js-number" data-max-number="100">
+									   <button class="number__minus js-minus-number" type="button"></button>
+									  <input type="text" class="number__input" value="1">
+									  <button class="number__plus js-plus-number" type="button"></button>
+									</div>
+							</li>
+							<li class="col-lg-2">
+								<div class="sum">1 800 <i class="rub">a</i></div> 
+							</li>
+							<li class="col-lg-1 text-right">
+								<a class="close"></a>
+							</li>
+						</ul>
+						<ul>
+							<li class="col-lg-5">
+								<a class="product__img">
+									<img src="img/product2-min.png">
+								</a>
+								<div class="product__text col-lg-offset-1">
+									<div class="product__info"><p>Шампунь</p></div>
+									<a class="product__name" href="#">Freshness daily, 30 мл</a>
+									<div class="badge is-orange"><a href="#">SOPHE LOO</a></div>
+								</div>
+							</li>
+							<li class="col-lg-2">
+								<div class="price">2 500 <i class="rub">a</i></div>
+							</li>
+							<li class="col-lg-2">
+									<div class="number js-number" data-max-number="100">
+									   <button class="number__minus js-minus-number" type="button"></button>
+									  <input type="text" class="number__input" value="2">
+									  <button class="number__plus js-plus-number" type="button"></button>
+									</div>
+							</li>
+							<li class="col-lg-2">
+								<div class="sum">5 000 <i class="rub">a</i></div> 
+							</li>
+							<li class="col-lg-1 text-right">
+								<a class="close"></a>
+							</li>
+						</ul>
+						
+
+					</div>
+				</div>
+			</div>
+			<!-- END basket__table -->
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="buy text-center">
+						<div class="buy__text">Сумма заказа: <strong>50 200 <i class="rub">a</i></strong></div>
+						<input type="button" class="btn-order title title_white" value="ОФОРМИТЬ ЗАКАЗ">
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+<!-- END out-->
+<div class="footer">
+	<div class="container container_no-pad">
+		<div class="row">
+			<div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+				<div class="footer__item">
+					<a href="#" class="footer__logo">
+						<strong>LeeWave</strong>
+						<span>ecocosmetics</span>blessed by nature
+					</a>
+					<div class="copyright hidden-xs">&copy; LW Cosmetics Все права защищены.</div>
+				</div>			
+			</div>
+			<div class="col-lg-5 col-md-5 col-sm-8 col-xs-12 hidden-xs">
+				<div class="footer__item">
+					<div class="row">
+						<div class="col-lg-1 col-md-12"></div>
+						<div class="col-lg-5 col-md-6 col-sm-6">
+							<ul class="footer__categs">
+								<li><a href="#">CAPPA GREEN</a></li>
+								<li><a href="#">SOPHI LOO</a></li>
+								<li class="is-inactive">FLORANCE</li>
+								<li class="is-inactive">VELVET</li>
+								<li class="is-inactive">SPA</li>
+							</ul>
+						</div>
+						<div class="col-lg-5 col-md-6 col-sm-6">
+							<ul class="footer__nav">
+								<li><a href="#">О компании</a></li>
+								<li><a href="#">Сертификация LW</a></li>
+								<li><a href="#">Доступы и оплата</a></li>
+								<li><a href="#">Справочник</a></li>
+								<li><a href="#">Контакты</a></li>
+								<li><a href="#">Еще пункты</a></li>
+							</ul>
+						</div>
+						<div class="col-lg-1 col-md-12"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-4">
+				<div class="footer__item">
+					<div class="row">
+						<div class="col-lg-11 col-lg-offset-1 col-md-12">
+							<div class="title title_white">СОЦ СЕТИ</div>
+							<ul class="footer__soc hidden-xs">
+								<li><a href="#"><i class="icon-soc-fb"></i>Facebook</a></li>
+								<li><a href="#"><i class="icon-soc-tw"></i>Twitter</a></li>
+								<li><a href="#"><i class="icon-soc-ig"></i>Instagram</a></li>
+								<li><a href="#"><i class="icon-soc-rss"></i>RSS</a></li>
+							</ul>
+							<div class="soc visible-xs">
+								<a href="#" class="soc__link"><i class="icon-soc-vk"></i></a>
+								<a href="#" class="soc__link"><i class="icon-soc-fb"></i></a>
+								<a href="#" class="soc__link"><i class="icon-soc-tw"></i></a>
+								<a href="#" class="soc__link"><i class="icon-soc-od"></i></a>
+								<a href="#" class="soc__link"><i class="icon-soc-ig"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-8 col-xs-12">
+				<div class="footer__item">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="title title_white">ПОДПИСКА НА РАССЫЛКУ</div>
+							<div class="subscribe">
+								<div class="subscribe__in">
+									<form>
+										<input class="subscribe__input" type="email" placeholder="Ваша почта" required>
+										<button class="subscribe__button" type="submit"><i class="icon-mail"></i></button>
+									</form>
+								</div>
+							</div>
+							<div class="copyright visible-xs">
+								&copy; LW Cosmetics 
+								<div>Все права защищены.</div>
+							</div>
+							<div class="created-by">
+								<a href="#">
+									<i class="icon-qb"></i>
+											<div>Разработка сайта -</div>
+											<span>qb-interactive</span>
+										</a>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- load scripts -->
+
+<script src="js/lib/head.js"></script>
+<script src="js/lib/jquery.js"></script>
+<script src="js/lib/slick.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

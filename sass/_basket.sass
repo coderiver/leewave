@@ -1,0 +1,180 @@
+// basket.html
+.is-white
+	background: #fff 
+.basket__top
+	margin: 55px 0
+	text-align: center
+.basket__header 
+	+reg
+	font-size: 36px
+	margin-bottom: 25px 
+.basket__info
+	+reg
+	font-size: 18px 
+	color: #a6a6a6
+	
+.table
+	ul
+		font-size: 0
+		+clr
+		border-bottom: 1px solid #ebebeb 
+		vertical-align: middle
+		padding: 15px 0
+	li
+		vertical-align: middle
+		+clr
+		 
+	.table__header
+		li
+			font-size: 16px
+			color: #a6a6a6
+			+seg
+	.table__body
+		ul
+			height: 150px 
+			display: table
+			width: 100%
+			table-layout: fixed 
+			>li
+				display: table-cell
+				vertical-align: middle
+				float: none
+	.product__img, .product__text
+		display: inline-block
+		vertical-align: middle
+	.product__name
+		margin: 0 0 5px 0
+		height: auto 
+		font-size: 16px 
+		color: #000
+	.product__img
+		height: auto
+		width: 60px 
+		text-align: center
+	.badge
+		a
+			background: transparent
+			font-size: 14px 
+			padding: 0 
+		&.is-violet
+			a
+				color: $violet  
+		&.is-orange
+			a
+				color: $orange  
+		&.is-green
+			a
+				color: $green  
+		&.is-blue
+			a
+				color: $blue  
+		&.is-yellow
+			a
+				color: $yellow 
+	.price
+		border-radius: 0
+		border: none
+		padding: 0
+		+reg
+		color: #000
+		font-size: 20px  
+		font-weight: normal
+		height: auto
+		line-height: 1em
+		letter-spacing: 0 
+		vertical-align: baseline 
+.sum
+	font-size: 20px
+	+reg
+	color: #000
+
+// .number__input
+// 	border: 1px solid #dbdbdb
+// 	display: inline
+// 	width: 55px
+// 	text-align: center
+// 	height: 25px  
+// .number
+// 	vertical-align: middle
+// .number__minus
+// 	display: inline-block
+// 	background: none
+// 	+arr(10, 10, #000, l)
+// .number__plus
+// 	display: inline-block
+// 	background: none
+.number
+	position: relative
+	display: inline-block
+	vertical-align: middle
+	height: 25px
+	&__input
+		width: 55px
+		height: 25px  
+		border: 1px solid #dbdbdb
+		display: inline-block
+		text-align: center
+		margin: 0 5px 
+		+box-shadow(0 0 5px #eee inset)
+	&__plus,
+	&__minus
+		position: relative
+		top: -5px 
+		background: none
+	&__minus
+		+arr(10,15,#000,l)
+	&__plus
+		+arr(10,15,#000,r)
+
+.close
+	cursor: pointer
+	width: 20px 
+	height: 20px 
+	position: relative
+	display: inline-block
+	opacity: .6
+	+tr(opacity .3s)
+	&:before, &:after 
+		content: ''
+		position: absolute
+		display: block
+		width: 20px
+		height: 1px  
+		background: #7f7f7f
+		top: 50%
+		// opacity: .7
+	&:hover 
+		opacity: 1 
+	&:before
+		+transform(rotate(45deg))
+	&:after
+		+transform(rotate(-45deg))
+
+.buy
+	padding: 40px 0 
+	.btn-order
+		margin-top: 50px  
+	
+.buy__text
+	+reg
+	font-size: 20px 
+	strong
+		font-size: 33px
+.btn-order
+	background: #3ca773 
+	text-align: center
+	height: 45px
+	line-height: 45px
+	width: 190px
+	border-radius: 5px  
+	cursor: pointer
+	opacity: .8
+	+tr(opacity .3s)
+	&:hover
+		opacity: 1
+
+.rub
+	display: inline-block
+	+rub
+	font-size: inherit
+	font-style: normal 

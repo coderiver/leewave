@@ -125,7 +125,8 @@ head.ready(function() {
 		arrows: false,
 		infinite: false,
 		asNavFor: '.js-slider-vertical',
-		vertical: true
+		vertical: true,
+		verticalSwiping: true
 	});
 	$('.js-slider-vertical').slick({
 		slidesToShow: 5,
@@ -139,8 +140,11 @@ head.ready(function() {
 		responsive: [
 		   {
 		     breakpoint: 767,
+		     
 		     settings: {
-		       slidesToShow: 1
+		       slidesToShow: 1,
+		       slidesToScroll: 1,
+		       vertical: false
 		     }
 		   }
 		]

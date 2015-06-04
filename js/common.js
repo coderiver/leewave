@@ -256,4 +256,9 @@ head.ready(function() {
         });
     }
     number();
+		jQuery(function()
+		{
+			jQuery('.scroll-pane').jScrollPane();
+		});
+
 });

@@ -207,7 +207,6 @@ $gray-line: #4a4c4a
 
 .cart
 	display: inline-block
-	margin-right: -15px
 	border-left: 1px solid $gray-line 
 	width: 185px
 	height: 60px
@@ -266,3 +265,64 @@ $gray-line: #4a4c4a
 			> ul li
 				display: block
 				margin-left: 20px 
+.cart-wrap
+	position: relative
+	margin-right: -15px 
+.dropdown
+	position: absolute
+	right: 0
+	z-index: 15 
+	margin-top: -5px 
+	margin: -5px -28px 0 0 
+	// +tr(margin .3s)
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		+arr(14, 7, #fff, t)
+		right: 37px
+		top: -7px 
+	.basket__body
+		height: auto
+		min-height: 90px 
+		min-width: 280px 
+		background: #FFF 
+	.product__info
+		span
+			color: #1476f1 
+	.product_inline
+		.product__name
+			letter-spacing: 1px 
+			color: #3c3d41 
+			text-transform: uppercase 
+			font-size: 10px
+		.product__text
+			.price
+				font-size: 18px
+		.product__info
+			margin: 5px  0
+.dropdown__list
+	height: 385px
+	margin-top: 7px 
+
+.dropdown__in
+	width: 280px 
+	border-radius: 5px
+	overflow: hidden 
+	+box-shadow(0 0 3px rgba(#31332c, .5))
+	background: #fff 
+	
+.goto
+	display: block
+	height: 38px
+	line-height: 38px  
+	color: #838c8c
+	opacity: .7
+	border-top: 1px solid #ebebeb  
+	+tr(opacity .3s)
+	+bold
+	font-size: 10px 
+	letter-spacing: 1px 
+	&:hover
+		opacity: 1  
+	

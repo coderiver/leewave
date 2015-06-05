@@ -256,6 +256,18 @@ $gray-line: #4a4c4a
 			> ul li
 				display: block
 				margin-left: 20px 
+		&.has-border
+			position: relative
+			&:after
+				content: ""
+				position: absolute
+				right: -45px
+				top: 0
+				bottom: 0
+				width: 1px
+				background: #535554  
+				+r(1200)
+					right: -5px
 .cart-wrap
 	position: relative
 	margin-right: -15px 

@@ -1,4 +1,8 @@
-// googs.html
+// goods.html
+.title__bold
+	margin: 16px 0 30px 0
+	font-size: 32px
+	+bold
 .goods
 	margin-top: 20px 
 	.goods__in
@@ -13,27 +17,37 @@
 		position: relative
 		margin-right: -15px 
 		margin-left: 48px 
+		+r(1023)
+			margin: 20px 0 0 0 
+			text-align: center
+		.title__bold
+			+r(425)
+				font-size: 24px
+			+r(330)
+				margin-left: -15px 
 	.goods__img
 		padding-top: 1px 
 		.img
 			margin-top: 33px 
 .a_round
+	width: 340px 
+	height: 70px
 	text-transform: uppercase 
 	color: #686a6d 
 	+bold
 	display: block
 	position: absolute
 	font-size: 22px 
-	height: 70px
 	line-height: 70px 
 	border: 1px solid #e9e9e9  
 	border-radius: 40px
-	width: 340px 
 	background: #fff
 	opacity: .8
 	letter-spacing: 3px 
 	padding-left: 55px
 	+tr(opacity .3s)
+	+r(420)
+		width: 100%
 	.icon-prev
 		position: absolute
 		left: 20px 
@@ -46,24 +60,12 @@
 	font-size: 0
 	line-height: 0
 	.tag
-		height: 15px
-		display: inline-block
-		line-height: 15px
-		color: #838d8f
-		+bold
-		font-size: 10px 
-		padding: 0 5px 
-		border: 1px solid #ddd
-		border-radius: 5px
-		text-align: center
 		margin-right: 10px 
 		&:last-child
 			margin-right: 0	
 
-.title__bold
-	margin: 16px 0 30px 0
-	font-size: 32px
-	+bold
+
+
 .tabs
 	font-size: 0
 .tabs__item
@@ -91,11 +93,14 @@
 		padding-right: 15px 
 
 .buy-form
-	width: 400px 
+	width: 100% 
 	margin-top: 45px  
 	// padding: 17px 20px  
 	border: 1px solid #eee
 	border-radius: 5px
+	+r(1023)
+		margin-left: auto
+		margin-right: auto  
 	.price
 		+bold
 		font-size: 24px 
@@ -103,6 +108,9 @@
 		height: 45px 
 		width: 70px 
 		margin: 0 8px 0 20px
+		+r(369)
+			margin: 0 0 20px 0
+			width: 130px
 	.number__input
 		height: 100%
 		width: 100% 
@@ -152,6 +160,9 @@
 	.price
 		display: inline-block
 		vertical-align: middle
+		+r(559)
+			display: block
+			margin-bottom: 20px 
 .buy-form__submit
 	display: block
 	// margin-top: 15px 
@@ -177,6 +188,9 @@
 .goods__text
 	+clr
 	margin-top: 50px 
+	.title
+		+r(767)
+			margin-top: 20px 
 	p
 		color: #838d8f
 		margin-top: 20px 
@@ -198,16 +212,45 @@
 	color: #838d8f  
 	
 .sale
-	margin-top: 50px 
+	margin: 50px 0 20px 0 
 	border-radius: 5px
-	overflow: hidden 
+	// overflow: hidden 
 	display: table
 	table-layout: fixed
 	width: 100% 
+	
 	+clr
 	.product
 		border-radius: 0
 		margin-bottom: 0 
+		border-right: 1px solid #eee 
+		position: relative
+		&:hover
+			z-index: 5 
+		+r(767)
+			border: 0 
+	>div:first-child
+		.sale__item
+			border-radius: 5px 0 0 5px
+			+r(1022)
+				border-radius: 5px 5px 0 0
+	>div:last-child
+		.sale__item
+			border-radius: 0 5px 5px 0
+			+r(1022)
+				border-radius: 0 0 5px 0
+			+r(767)
+				border-radius: 0 0 5px 5px
+	>div:nth-child(2)
+		.sale__item
+			+r(1022)
+				border-radius: 0 0 0 5px
+			+r(767)
+				border-radius: 0
+	>div:last-child
+		.product
+			border-right: none
+
 	.product__price
 		.price_no-style
 			font-size: 13px
@@ -221,14 +264,30 @@
 .attention
 	background: #38abb4 
 	padding: 35px 20px 
+	z-index: 1 
+	position: relative
 	.title__bold
 		color: #fff 
+		margin-top: 34px 
+
 	.attention__info
 		color: #fff 
 		font-size: 14px 
 		margin-bottom: 34px 
 	.btn_out
 		text-align: center
+	&:after
+		content: ''
+		position: absolute
+		right: -7px
+		top: 50% 
+		margin-top: -5px 
+		+arr(7, 10, #38abb4, r)
+		+r(1023)
+			display: none
+	+r(1023)
+		text-align: center
+		
 
 
 

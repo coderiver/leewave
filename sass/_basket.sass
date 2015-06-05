@@ -71,7 +71,18 @@
 		&.is-yellow
 			a
 				color: $yellow 
-
+.price_no-style
+	border-radius: 0
+	border: none
+	padding: 0
+	+reg
+	color: #000
+	font-size: 20px  
+	font-weight: normal
+	height: auto
+	line-height: 1em
+	letter-spacing: 0 
+	vertical-align: baseline 
 .sum
 	font-size: 20px
 	+reg
@@ -97,18 +108,6 @@
 		padding-left: 8%
 		display: table-cell
 		vertical-align: middle
-		.price
-			border-radius: 0
-			border: none
-			padding: 0
-			+reg
-			color: #000
-			font-size: 20px  
-			font-weight: normal
-			height: auto
-			line-height: 1em
-			letter-spacing: 0 
-			vertical-align: baseline 
 	.product__name
 		display: block
 		margin: 0 0 5px
@@ -143,14 +142,14 @@
 		text-align: center
 		margin: 0 5px 
 		+box-shadow(0 0 5px #eee inset)
-	&__plus,
-	&__minus
+	&__plus_trian,
+	&__minus_trian
 		position: relative
 		top: -5px 
 		background: none
-	&__minus
+	&__minus_trian
 		+arr(10,15,#000,l)
-	&__plus
+	&__plus_trian
 		+arr(10,15,#000,r)
 
 .close

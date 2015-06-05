@@ -3,21 +3,12 @@ $gray-line: #4a4c4a
 	background: $dark 
 	.container
 		position: relative
-		overflow: hidden
 		min-height: 140px
+	.row
+		&:first-child
+			border-bottom: 1px solid $gray-line 
 	.logo
-		&:before,
-		&:after
-			content: ''
-			position: absolute
-			bottom: 60px
-			width: 500px
-			height: 1px
-			background: $gray-line 
-		&:before
-			left: -500px
-		&:after
-			right: -500px 
+		background: $dark
 	+r(1023)
 		position: fixed
 		left: 0
@@ -31,8 +22,6 @@ $gray-line: #4a4c4a
 				display: none
 		.logo
 			height: 100px
-			&:before,
-			&:after,
 			&__text,
 			.icon-logo
 				display: none
@@ -181,7 +170,7 @@ $gray-line: #4a4c4a
 			width: 25px
 			height: 2px
 			background-color: #FFF   
-			+transition(transform, top, bottom, .2s)
+			//+transition(transform, top, bottom, height, .2s)
 		&:before
 			top: -8px
 		&:after
@@ -194,12 +183,14 @@ $gray-line: #4a4c4a
 			background-color: transparent
 			&:before 
 				+transform(rotate(45deg))
-				top: 0
+				top: -1px
+				height: 4px
 				+r(1023)
 					background: #000 
 			&:after
 				+transform(rotate(-45deg))
-				bottom: 0
+				bottom: -1px
+				height: 4px
 				+r(1023)
 					background: #000 
 
@@ -268,13 +259,22 @@ $gray-line: #4a4c4a
 .cart-wrap
 	position: relative
 	margin-right: -15px 
+	display: inline-block
+	&:hover
+		.dropdown
+			opacity: 1
+			visibility: visible
+			+transform(translate3d(0,0,0))
 .dropdown
 	position: absolute
 	right: 0
 	z-index: 15 
 	margin-top: -5px 
 	margin: -5px -28px 0 0 
-	// +tr(margin .3s)
+	opacity: 0
+	visibility: hidden
+	+transform(translate3d(0,10px,0))
+	+transition(opacity, transform .3s)
 	&:before
 		content: ''
 		display: block
@@ -282,11 +282,14 @@ $gray-line: #4a4c4a
 		+arr(14, 7, #fff, t)
 		right: 37px
 		top: -7px 
-	.basket__body
-		height: auto
+	.dropdown__item
+		padding: 15px 0 
 		min-height: 90px 
 		min-width: 280px 
 		background: #FFF 
+		border-top: 1px solid #ebebeb
+		&:first-child
+			border-top: 0
 	.product__info
 		span
 			color: #1476f1 

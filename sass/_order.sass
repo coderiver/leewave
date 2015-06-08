@@ -1,0 +1,98 @@
+// order.html
+.input-text
+	height: 45px
+	background-color: #eee
+	border-top: 1px solid #ddd
+	border-radius: 5px
+	width: 100%
+	padding-left: 20px 
+	font-size: 14px
+	+reg 
+	margin-bottom: 10px 
+	
+.title_h3
+	+reg
+	font-size: 26px 
+
+.label
+	+reg
+	font-size: 12px
+	margin: 15px 0
+
+.label-info
+	+pt
+	font-style: italic 
+	font-size: 13px 
+	color: #a6a6a6 
+	
+.field
+	padding: 30px 0 45px 0
+	border-top: 1px solid #ddd  
+	+clr
+	.title_h3
+		margin-bottom: 35px 
+.order
+	margin-bottom: 50px 
+	
+.input-text-big 
+	height: 130px
+	padding: 10px 20px
+	resize: none
+	outline: none
+	border: 0
+	border-top: 1px solid #ddd 
+
+.radio__item
+	margin-top: 35px 
+
+.radio__title
+	+reg
+	font-size: 16px
+	margin-top: 15px 
+
+.radio__about
+	+reg
+	font-size: 13px 
+	color: #a6a6a6 
+	margin-top: 15px 
+	
+	
+
+.radio__price
+	+reg
+	font-size: 13px
+	margin-top: 15px
+	
+input[type="radio"]
+	display: none
+label input[type="radio"].radio-green + span
+	display: inline-block
+	width: 15px
+	height: 15px  
+	border-radius: 50%
+	border: 1px solid #b6b6b6  
+	background: transparent
+	cursor: pointer 
+	position: relative
+	+tr(background .3s)
+label input[type="radio"]:checked.radio-green + span
+	background: #38a36f 
+	border-color: #38A36F 
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		width: 5px
+		height: 5px
+		background: #fff 
+		top: 50%
+		left: 50%
+		margin-top: -2.5px
+		margin-left: -2.5px
+		border-radius: 50%     
+		
+.link-green
+	color: #3ca773
+	text-decoration: underline 
+	
+

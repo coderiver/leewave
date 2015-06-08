@@ -333,4 +333,5 @@ head.ready(function() {
 	    return false;
 	    
 	  });
+	  $('.js-tel-mask').mask("+7 (999) 999-99-99", {placeholder: "X"});
 });

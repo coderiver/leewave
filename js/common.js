@@ -3,6 +3,7 @@ head.ready(function() {
 	$(document).on("click", function(){
 		$(".js-menu").slideUp(200);
 		$('.js-open-menu').removeClass("is-active");
+		$('.js-search').removeClass("is-active");
 	});
 
 	// function scrollFixedElements() {
@@ -296,7 +297,7 @@ head.ready(function() {
 				event.stopPropagation();
 		});
 		$("body").on("click",".glyph.icon",function() {
-			$(".js-select-text").click();
+			// $(".js-select-text").click();
 	});
 		$("body").on("click",".js-select-text",function(event) {
 			var select = $(this).parents(".js-select");
@@ -317,7 +318,7 @@ head.ready(function() {
 				var text = $(this).text();
 				var select = $(this).parents(".js-select");
 				var selectList = $(this).parents(".js-select-list");
-				select.find(".js-select-text").text(text);
+				select.find(".js-select-text-in").text(text);
 				select.find("option").removeAttr("selected");
 				select.find('option[value="'+val+'"]').attr("selected", "selected");
 				selectList.find("li").removeClass("is-active");
@@ -327,8 +328,22 @@ head.ready(function() {
 				return false;
 				
 		});
-		$('.js-tel-mask').mask("+7 (999) 999-99-99", {placeholder: "X"});
+		function doMask(){
+			if($('.js-tel-mask').length){
+				$('.js-tel-mask').mask("+7 (999) 999-99-99", {placeholder: "X"});
+			}
+		}
+		doMask();
 
 		//js-search
-			// $('.js-search')
+			$('.js-search-button').on("click", function(){
+				var form = $(this).parents('.js-search');
+				form.toggleClass('is-active');
+				if(form.hasClass('is-active')) return false;
+			});
+			$('.js-search-input').on("click", function(){
+				 event.stopPropagation();
+				 return false;
+			});
+
 });

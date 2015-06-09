@@ -285,53 +285,50 @@ head.ready(function() {
 				return false;
 			});
 
-		//select
-	  $('body').on("click", '.js-select-text', function(){
-	      $('.js-select-list').hide();
-	  });
-	  
-	  $('body').on("click", ".js-select", function(event){
-	      event.stopPropagation();
-	  });
-	  
-	  $('body').on('click', '.js-select-text', function(){
-	//     alert('sss');
-	    var select = $(this).parents('.js-select');
-	//         selectList = $('.js-select');
-	    
-	if (select.hasClass("is-active")) {
-	            $(".js-select").removeClass("is-active");
-	            $(".js-select-list").hide(100);
-	        }
-	    else {
-	            $(".js-select").removeClass("is-active");
-	            $(".js-select-list").hide(100);
-	            select.toggleClass("is-active").find(".js-select-list").slideToggle(100);
-	            
 
-	    }
-	  });
+	$(document).click(function() {
+					$(".js-select").removeClass("is-active");
+					$(".js-select-list").slideUp(100);
+			});
+		
+	// select list
+		$("body").on("click",".js-select",function(event) {
+				event.stopPropagation();
+		});
+		$("body").on("click",".glyph.icon",function() {
+			$(".js-select-text").click();
+	});
+		$("body").on("click",".js-select-text",function(event) {
+			var select = $(this).parents(".js-select");
+				if (select.hasClass("is-active")) {
+						$(".js-select").removeClass("is-active");
+						$(".js-select-list").slideUp(100);
+				}
+				else {
+						$(".js-select").removeClass("is-active");
+						$(".js-select-list").slideUp(100);
+						select.toggleClass("is-active").find(".js-select-list").slideToggle(100);
+				}
+			 
+		});
 
-	  $('body').on('click', '.js-select-list li', function() {
-	    var $this = $(this),
-	        val = $this.attr('data-val'),
-	        text = $this.text(),
-	        select = $this.parents('.js-select'),
-	        selectList = $this.parents('.js-select-list');
-	      select
-	        .find('.js-select-text')
-	          .text(text)
-	        .find('option')
-	          .removeAttr('selected')
-	        .find('option[value"'+val+'"]')
-	          .attr('selected', 'selected');
+		$("body").on("click",".js-select-list li",function() {
+				var val = $(this).attr("data-val");
+				var text = $(this).text();
+				var select = $(this).parents(".js-select");
+				var selectList = $(this).parents(".js-select-list");
+				select.find(".js-select-text").text(text);
+				select.find("option").removeAttr("selected");
+				select.find('option[value="'+val+'"]').attr("selected", "selected");
+				selectList.find("li").removeClass("is-active");
+				$(this).addClass("is-active");
+				select.removeClass("is-active");
+				selectList.slideUp(100);
+				return false;
+				
+		});
+		$('.js-tel-mask').mask("+7 (999) 999-99-99", {placeholder: "X"});
 
-	      selectList.find('li').removeClass('is-active');
-	      select.removeClass('is-active');
-	      selectList.slideUp(100);
-	    
-	    return false;
-	    
-	  });
-	  $('.js-tel-mask').mask("+7 (999) 999-99-99", {placeholder: "X"});
+		//js-search
+			// $('.js-search')
 });

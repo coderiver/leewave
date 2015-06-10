@@ -305,7 +305,7 @@ a
 .btn-action
 	display: inline-block
 	padding: 13px 37px 11px
-	background: #2a77ed
+	background: #3ca773
 	border-radius: 34px
 	color: #fff
 	text-transform: uppercase
@@ -317,8 +317,30 @@ a
 	+r(767)
 		padding: 17px 20px 15px 
 	&:hover
-		background: darken(#2a77ed, 5%) 
-
+		background: darken(#3ca773, 5%) 
+.btn-back
+	display: inline-block
+	position: relative
+	border: 1px solid #ddd
+	padding: 13px 27px 11px 44px
+	background: #fff
+	border-radius: 34px
+	color: #3b3d40
+	text-transform: uppercase
+	+bold
+	font-size: 10px
+	letter-spacing: 2px 
+	line-height: 1 
+	+transition(border .3s)
+	&:hover
+		border-color: #aaa  
+	i
+		position: absolute
+		left: 15px
+		top: 50%
+		margin-top: -10px
+		font-size: 20px
+		color: #838d8f 
 .select
 	position: relative
 	text-align: left

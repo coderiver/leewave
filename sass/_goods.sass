@@ -228,16 +228,17 @@
 	display: table
 	table-layout: fixed
 	width: 100% 
-	
 	+clr
+	>div
+		display: table-cell
+	// .sale__item
+		// width: 100% 
 	>div:first-child
 		.sale__item
 			border-radius: 5px 0 0 5px
 			+r(1022)
 				border-radius: 5px 5px 0 0
 			+r(768)
-
-
 	>div:last-child
 		.sale__item
 			border-radius: 0 5px 5px 0

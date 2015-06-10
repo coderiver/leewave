@@ -326,7 +326,10 @@
 
 .search_form
 	display: inline-block
-	width: 279px 	
+	float: right
+	width: 32% 
+	min-width: 240px 
+	max-width: 279px 	
 	height: 45px 
 	top: 50% 
 	right: 0
@@ -334,7 +337,16 @@
 	+clr
 	position: relative
 	overflow: hidden 
-	// +tr( .3s)
+	+r(1022)
+		float: none
+		margin: 20px  auto
+		// .input-text
+		// 	+translate(0,0)
+		// .btn-search
+		// 	background: #3ca773
+		// 	i
+		// 		color: #fff 
+
 	.input-text
 		margin-bottom: 0
 		padding-right: 40px

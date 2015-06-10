@@ -336,10 +336,12 @@ head.ready(function() {
 		doMask();
 
 		//js-search
-			$('.js-search-button').on("click", function(){
+			$('.js-search-btn').on("click", function(){
 				var form = $(this).parents('.js-search');
-				form.toggleClass('is-active');
-				if(form.hasClass('is-active')) return false;
+				if(!form.hasClass('is-active')) { 
+					form.addClass('is-active');
+				return false;}
+
 			});
 			$('.js-search-input').on("click", function(){
 				 event.stopPropagation();

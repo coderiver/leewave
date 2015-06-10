@@ -98,7 +98,8 @@ head.ready(function() {
 		$('.js-slider-nav a[data-slide="'+nextSlide+'"]').parent().addClass("is-active");
 	});
 
-	$(".js-slider-nav a").on("click", function(){
+	$(".js-slider-nav a").on("mouseover", function(){
+		if($(this).parents('li').hasClass("is-inactive")) return false;
 		var index = $(this).attr("data-slide");
 		$(".js-slider-nav li").removeClass("is-active");
 		$(this).parent().addClass("is-active");

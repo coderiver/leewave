@@ -4,6 +4,10 @@
 	color: #3c3d41 
 	+ebold 
 	line-height: 1em 
+	+r(1022)
+		font-size: 22px
+	+r(768)
+		font-size: 18px 
 .statics
 	padding: 65px 0
 	background: #FFF 
@@ -13,15 +17,49 @@
 		
 	.b-large
 		margin: 0 -10%  55px
+		+r(1023)
+			margin: 0 0 35px 
+		+r(767)
+			margin-bottom: 20px 
+			
 
 .file
 	position: relative
+	padding-left: 45px
+	width: 100% 
+	margin-left: -15px 
+	margin-bottom: 25px 
+	.dwnld
+		position: absolute
+		display: block
+		left: 0
+		top: 50%
+		margin-top: -17px  
+		width: 34px
+		cursor: pointer
+		height: 34px
+		border-radius: 50px
+		line-height: 33px
+		text-align: center 
+		border: 1px solid #e0e0e0 
+		color: inherit
+		opacity: .7
+		+tr(opacity .3s)    
+		&:hover
+			opacity: 1
+			color: inherit 
+			border: 1px solid #e0e0e0 
+		i
+			font-size: 20px
+		 
 	.file__name
+		line-height: 1em 
 		a
 			color: #6dbd96
 			border-bottom: 1px dotted #6dbd96
 			font-size: 15px 
 	.file__info
+		line-height: 1em 
 		span
 			color: #666d70
 			font-size: 13px 

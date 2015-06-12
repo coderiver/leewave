@@ -180,7 +180,7 @@ $gray-line: #4a4c4a
 		&:after
 			bottom: -8px
 	&.is-active
-		+r(1023)
+		+r(990)
 			background: #fff 
 		span
 			+transition(none)
@@ -189,13 +189,13 @@ $gray-line: #4a4c4a
 				+transform(rotate(45deg))
 				top: -1px
 				height: 4px
-				+r(1023)
+				+r(990)
 					background: #000 
 			&:after
 				+transform(rotate(-45deg))
 				bottom: -1px
 				height: 4px
-				+r(1023)
+				+r(990)
 					background: #000 
 
 
@@ -238,6 +238,8 @@ $gray-line: #4a4c4a
 	padding: 60px  0
 	+clr
 	+r(1023)
+		top: 100px
+	+r(990)
 		position: fixed
 		top: 60px
 		max-height: 100%
@@ -291,6 +293,8 @@ $gray-line: #4a4c4a
 	visibility: hidden
 	+transform(translate3d(0,10px,0))
 	+transition(opacity, transform .3s)
+	+r(1100)
+		margin-right: -20px
 	&:before
 		content: ''
 		display: block

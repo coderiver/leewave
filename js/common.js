@@ -1,7 +1,8 @@
 head.ready(function() {
 
 	$(document).on("click", function(){
-		$(".js-menu").slideUp(200);
+		$(".menu").hide();
+		$(".nav").hide();
 		$('.js-open-menu').removeClass("is-active");
 		$('.js-search').removeClass("is-active");
 	});

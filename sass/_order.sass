@@ -9,6 +9,8 @@
 	font-size: 14px
 	+reg 
 	margin-bottom: 10px
+	&:focus
+		background: #f2f2f2
 	+r(767)
 		height: 35px  
 .input-text-big 
@@ -20,17 +22,32 @@
 	border-top: 1px solid #ddd 
 	+r(767)
 		height: 100px 
+	&.is-height
+		height: 240px
+		+r(1200)
+			height: 150px
+		+r(1023)
+			height: 100px
 .title_h3
 	+reg
 	font-size: 26px 
 
 .label
 	+reg
+	display: block
 	font-size: 12px
 	margin: 15px 0
-
+	&_bold
+		+bold
+		margin: 15px 0 5px 
+		font-size: 15px
+		+r(767)
+			font-size: 12px
+		+ .input-text
+			margin-bottom: 6px
 .label-info
 	+pt
+	display: block
 	font-style: italic 
 	font-size: 13px 
 	color: #a6a6a6 
@@ -50,11 +67,13 @@
 	margin-top: 35px 
 
 .radio__title
+	display: block
 	+reg
 	font-size: 16px
 	margin-top: 15px 
 
 .radio__about
+	display: block
 	+reg
 	font-size: 13px 
 	color: #a6a6a6 
@@ -62,7 +81,8 @@
 	
 	
 
-.radio__price
+.radio__price	
+	display: block
 	+reg
 	font-size: 13px
 	margin-top: 15px

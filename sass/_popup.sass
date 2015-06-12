@@ -1,0 +1,73 @@
+.popup
+	display: none
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 10
+	+vertical
+	padding: 50px
+	overflow-y: auto
+	overflow-x: hidden 
+	background: rgba(#000,.7)
+	+r(767)
+		padding: 20px  
+	&__main
+		display: inline-block
+		position: relative
+		vertical-align: middle
+		padding: 30px 
+		width: 970px
+		background: #fff
+		text-align: left
+		border-radius: 5px 
+		+r(1100)
+			width: 100%
+		+r(767)
+			padding: 20px 
+	&__title
+		padding-right: 20px
+		margin-top: -10px
+		font-size: 32px
+		+bold
+		+r(1023)
+			font-size: 28px
+		+r(767)
+			font-size: 22px
+	&__action
+		margin-top: 10px
+.it-is-really-invisible-text
+	color: #eee 
+	font-style: italic
+	font-size: 15px
+	+r(767)
+		margin-bottom: 10px
+.btn-close
+	position: absolute
+	right: 12px
+	top: 12px
+	background: none
+	.glyph
+		color: #bbb
+		font-size: 32px 
+		
+.message
+	position: relative
+	margin: 23px 0
+	padding-left: 45px 
+	font-size: 21px
+	+bold
+	color: #2b77ee 
+	+r(1023)
+		font-size: 18px
+	+r(767)
+		margin: 40px 0 
+		font-size: 14px
+	.icon-success
+		position: absolute
+		left: 0
+		top: -3px
+.icon-success
+	display: inline-block
+	+s(success)

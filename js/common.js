@@ -160,19 +160,19 @@ head.ready(function() {
 	});
 	var activeSlide = $(".js-slider-vertical .is-current");
 	$(".js-slider-prev").on('click', function(){
-		if (activeSlide.prev().length) {
-			activeSlide.removeClass("is-current").prev().addClass("is-current");
-		}
+		//if (activeSlide.prev().length) {
+			//activeSlide.removeClass("is-current").prev().addClass("is-current");
+		//}
 		$(".js-slider-vertical").slick("slickPrev");
 		//var index = $(this).attr("data-slick-index");
 		//$(".js-slider-promo").slick("slickGoTo", index);
 		return false;
 	});
 	$(".js-slider-next").on('click', function(){
-		if (activeSlide.next().length) {
-			console.log(activeSlide.next().length);
-			activeSlide.removeClass("is-current").next().addClass("is-current");
-		}
+		//if (activeSlide.next().length) {
+			//console.log(activeSlide.next().length);
+			//activeSlide.removeClass("is-current").next().addClass("is-current");
+		//}
 		$(".js-slider-vertical").slick("slickNext");
 		//var index = $(this).attr("data-slick-index");
 		//$(".js-slider-promo").slick("slickGoTo", index);

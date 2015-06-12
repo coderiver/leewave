@@ -126,7 +126,7 @@ head.ready(function() {
 		slidesToScroll: 1,
 		arrows: false,
 		infinite: false,
-		asNavFor: '.js-slider-vertical',
+		//asNavFor: '.js-slider-vertical',
 		vertical: true,
 		verticalSwiping: true
 	});
@@ -135,7 +135,7 @@ head.ready(function() {
 		infinite: false,
 		slidesToScroll: 1,
 		arrows: false,
-		asNavFor: '.js-slider-promo',
+		//asNavFor: '.js-slider-promo',
 		focusOnSelect: true,
 		vertical: true,
 		verticalSwiping: true,
@@ -153,21 +153,35 @@ head.ready(function() {
 	}); 
 
 	$("body").on('click', ".js-slider-vertical .slick-slide", function(){
+		var index = $(this).attr("data-slick-index");
+		$(".js-slider-promo").slick("slickGoTo", index);
 		$(".js-slider-vertical .slick-slide").removeClass("is-current");
 		$(this).addClass("is-current");	
 	});
+	var activeSlide = $(".js-slider-vertical .is-current");
 	$(".js-slider-prev").on('click', function(){
+		if (activeSlide.prev().length) {
+			activeSlide.removeClass("is-current").prev().addClass("is-current");
+		}
 		$(".js-slider-vertical").slick("slickPrev");
+		//var index = $(this).attr("data-slick-index");
+		//$(".js-slider-promo").slick("slickGoTo", index);
 		return false;
 	});
 	$(".js-slider-next").on('click', function(){
+		if (activeSlide.next().length) {
+			console.log(activeSlide.next().length);
+			activeSlide.removeClass("is-current").next().addClass("is-current");
+		}
 		$(".js-slider-vertical").slick("slickNext");
+		//var index = $(this).attr("data-slick-index");
+		//$(".js-slider-promo").slick("slickGoTo", index);
 		return false;
 	});
-	$(".js-slider-vertical").on('beforeChange', function(event, slick, currentSlide, nextSlide){
-		$('.slick-slide').removeClass("is-current");
-		$('[data-slick-index="'+nextSlide+'"]').addClass("is-current");
-	});
+	// $(".js-slider-vertical").on('beforeChange', function(event, slick, currentSlide, nextSlide){
+	// 	//$('.slick-slide').removeClass("is-current");
+	// 	//$('[data-slick-index="'+nextSlide+'"]').addClass("is-current");
+	// });
 
 	function fixHeader() {
 		var top = $(document).scrollTop();

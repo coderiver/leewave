@@ -92,7 +92,20 @@
 		color: #3b3d40 
 		letter-spacing: 2px 
 	p
-		margin: 15px 0 
+		margin: 15px 0
+		position: relative
+		vertical-align: top
+		+clr
+		img.is-left
+			float: left
+			margin-right: 5% 
+			margin-left: -10% 
+			max-width: 100% 
+			+r(1022)
+				margin-right: 2%
+				margin-left: 0  
+				width: 48% 
+
 	a
 		font-weight: 700
 		color: $green
@@ -133,3 +146,52 @@
 		+r(1023)
 			margin: 20px 0
 			font-size: 24px 
+	strong
+		+reg
+		font-size: 20px 
+		color: #000 
+		display: block
+		+r(1022)
+			font-size: 18px
+		+r(767)
+			font-size: 16px 
+	ul
+		padding-left: 35px 
+		counter-reset: list
+		margin-bottom: 40px 
+		li
+			list-style: disc
+			color: #b5bbbc  
+			span
+				color: #666d70 
+				font-size: 15px
+			 
+
+		ol
+			position: relative
+			font-size: 15px
+			line-height: 2em   
+			&:before
+				counter-increment: list
+				content: counter(list)
+				position: absolute
+				left: -26px
+				width: 20px
+				height: 20px
+				line-height: 20px 
+				font-size: 13px 
+				top: 6px
+				+reg
+				text-align: center
+				border-radius: 50%
+				border: 1px solid #e3e2e2 
+	figure
+		figcaption
+			text-align: right
+			+pt
+			font-size: 13px
+			font-style: italic
+		img
+			max-width: 100%  
+
+			 

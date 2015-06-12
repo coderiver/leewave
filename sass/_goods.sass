@@ -35,11 +35,13 @@
 		+r(510)
 			padding: 0 15px 
 .a_round
-	width: 340px 
-	// height: 70px
-	padding: 21px 0 19px 55px  
+	width: 70px  
+	// width: 340px
+	height: 70px
+	padding-left: 55px  
 	text-transform: uppercase 
 	color: #686a6d 
+	position: relative
 	+bold
 	display: block
 	position: absolute
@@ -50,11 +52,23 @@
 	background: #fff
 	opacity: .8
 	letter-spacing: 3px 
-	+tr(opacity .3s)
+	+transition(opacity, width, visibility,  .6s)
+	&:hover
+		opacity: 1
+		width: 340px 
+		span
+			// display: inline-block
+			visibility: visible
+			width: 100% 
+			
+		+r(693)
+			width: 200px 
 	+r(693)
 		font-size: 16px 
-		width: 200px 
-		padding: 18px 0 16px 55px  
+		// width: 200px 
+		width: 50px
+		height: 50px 
+		// padding: 18px 0 16px 55px  
 	.icon-prev
 		position: absolute
 		left: 20px 
@@ -62,8 +76,16 @@
 		margin-top: -12px 
 		+r(693)
 			margin-top: -8px
-	&:hover
-		opacity: 1
+	span
+		// display: none
+		visibility: hidden
+		white-space: nowrap
+		// +vcenter 
+		position: absolute
+		top: 50%
+		left: 20px 
+		+translate(0,-50%) 
+		+tr(visibility .3s linear .3s)
 		
 .tag-list
 	font-size: 0

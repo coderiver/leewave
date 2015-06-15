@@ -51,7 +51,8 @@
 	.glyph
 		color: #bbb
 		font-size: 32px 
-		
+		+r(1023)
+			font-size: 26px
 .message
 	position: relative
 	margin: 23px 0
@@ -64,10 +65,14 @@
 	+r(767)
 		margin: 40px 0 
 		font-size: 14px
-	.icon-success
+	.glyph
 		position: absolute
 		left: 0
-		top: -3px
-.icon-success
-	display: inline-block
-	+s(success)
+		top: -5px
+		line-height: 1
+		font-size: 32px
+		+r(1023)
+			font-size: 26px
+		+r(767)
+			top: 0
+		

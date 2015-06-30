@@ -27,17 +27,17 @@ head.ready(function() {
 				 breakpoint: 1023,
 				 settings: {
 					 dots: true,
-					 centerMode: true,
-					 centerPadding: '105px',
-					 slidesToShow: 2
+					 // centerMode: true,
+					 // centerPadding: '80px',
+					 slidesToShow: 3
 				 }
 			 },
 			 {
-				 breakpoint: 767,
+				 breakpoint: 768,
 				 settings: {
 					 dots: true,
-					 centerMode: true,
-					 centerPadding: '55px',
+					 // centerMode: true,
+					 // centerPadding: '55px',
 					 slidesToShow: 2
 				 }
 			 },
@@ -45,7 +45,7 @@ head.ready(function() {
 				 breakpoint: 640,
 				 settings: {
 					 dots: true,
-					 centerMode: true,
+					 // centerMode: true,
 					 centerPadding: '55px',
 					 slidesToShow: 1
 				 }
@@ -54,7 +54,7 @@ head.ready(function() {
 				 breakpoint: 480,
 				 settings: {
 					 dots: true,
-					 centerMode: true,
+					 // centerMode: true,
 					 centerPadding: '65px',
 					 slidesToShow: 1
 				 }
@@ -63,7 +63,7 @@ head.ready(function() {
 				 breakpoint: 375,
 				 settings: {
 					 dots: true,
-					 centerMode: true,
+					 // centerMode: true,
 					 centerPadding: '45px',
 					 slidesToShow: 1
 				 }
@@ -112,7 +112,8 @@ head.ready(function() {
 		var $menu = $('.js-menu'),
 				$this = $(this);
 			$this.toggleClass('is-active');
-			$menu.slideToggle(200);
+			$menu.toggleClass('is-active');
+			// $menu.slideToggle(200);
 		 event.stopPropagation();
 		 return false;
 	 });
@@ -127,16 +128,25 @@ head.ready(function() {
 		slidesToScroll: 1,
 		arrows: false,
 		infinite: false,
-		//asNavFor: '.js-slider-vertical',
+		// asNavFor: '.js-slider-vertical',
 		vertical: true,
-		verticalSwiping: true
+		verticalSwiping: true,
+		responsive: [
+			 {
+				 breakpoint: 550,
+				 settings: {
+					vertical: false,
+					verticalSwiping: false
+				 }
+			 }
+		]
 	});
 	$('.js-slider-vertical').slick({
 		slidesToShow: 5,
 		infinite: false,
 		slidesToScroll: 5,
 		arrows: false,
-		//asNavFor: '.js-slider-promo',
+		// asNavFor: '.js-slider-promo',
 		//focusOnSelect: true,
 		vertical: true,
 		verticalSwiping: true,
@@ -375,5 +385,26 @@ head.ready(function() {
 		$(".js-popup-main").on("click", function(event){
 			event.stopPropagation();
 		});
+		///////////////
+
+		// $('body').on('click', '.js-mover', function() {
+		// 	var position = $('.js-cart').offset();
+		// 	move('.js-goto')
+		// 		.set('position', 'relative')
+		// 		.y(position.top)
+		// 		// .add('top', position.top)
+		// 		// .add('left', position.left)
+		// 		// .to(position.top,position.left)
+		// 		.x(position.left)
+		// 		.end()
+		// 	// $('.js-goto').offset(position);
+		// });
+
+		$('body').on('click', '.js-mover', function() {
+			$('.js-cart i').addClass('is-move');
+			setTimeout("$('.js-cart i').removeClass('is-move')", 600)
+
+		});
+		
 
 });

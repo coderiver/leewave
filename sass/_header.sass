@@ -72,7 +72,7 @@ $gray-line: #4a4c4a
 	&:hover
 		color: #fff 
 .nav
-	display: none
+	display: none !important
 	position: fixed
 	top: 100px
 	left: 0
@@ -83,6 +83,9 @@ $gray-line: #4a4c4a
 	background: #303331 
 	text-align: center
 	box-shadow: 0 5px 21px rgba(0, 0, 0, 0.32)
+	+r(990)
+		&.is-active
+			display: block !important
 	li
 		border-top: 1px solid #4f5250
 		&:first-child
@@ -237,6 +240,10 @@ $gray-line: #4a4c4a
 	background: rgba($dark, .9)
 	padding: 60px  0
 	+clr
+	&.is-active
+		display: block
+	+r(768)
+		display: none !important
 	+r(1023)
 		top: 100px
 	+r(990)

@@ -129,11 +129,13 @@ head.ready(function() {
 		arrows: false,
 		infinite: false,
 		// asNavFor: '.js-slider-vertical',
+		draggable: false,
+		swipe: false,
 		vertical: true,
-		verticalSwiping: true,
+		// verticalSwiping: true,
 		responsive: [
 			 {
-				 breakpoint: 550,
+				 breakpoint: 768,
 				 settings: {
 					vertical: false,
 					verticalSwiping: false

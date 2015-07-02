@@ -183,6 +183,24 @@ body
 			+r(1023)
 				margin-top: 11px
 				font-size: 30px
+.out
+	margin: 0 auto -304px
+	min-height: 100%
+	height: auto !important
+	height: 100%
+	+r(1023)
+		margin-bottom: -487px 
+	+r(767)
+		margin-bottom: -508px
+	&:after
+		content: ""
+		display: block 
+		clear: both
+		height: 304px
+		+r(1023)
+			height: 487px
+		+r(767)
+			height: 508px
 a
 	text-decoration: none
 // common blocks    
@@ -331,6 +349,14 @@ a
 		background: #2b77ee 
 		&:hover
 			background: darken(#2b77ee, 5%) 
+	&_border
+		background: none
+		border: 1px solid
+		color: #3c3d41
+		+tr(color .3s)
+		&:hover
+			background: none
+			color: #a6a6a6  
 .btn-back
 	display: inline-block
 	position: relative
@@ -409,3 +435,9 @@ a
 				background: #fff
 			&:last-child
 				border: none
+
+.status-icon
+	margin: -13px 0 23px 
+	font-size: 48px
+	color: #3ca773 
+	

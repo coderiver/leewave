@@ -96,15 +96,16 @@
 		position: relative
 		vertical-align: top
 		+clr
-		img.is-left
+		img[align="left"]
 			float: left
-			margin-right: 5% 
-			margin-left: -10% 
+			margin: 0 40px 20px -10%  
 			max-width: 100% 
 			+r(1023)
-				margin-right: 2%
 				margin-left: 0  
 				width: 48% 
+			+r(600)
+				width: 100%
+				margin-right: 0 
 
 	a
 		font-weight: 700
@@ -195,7 +196,7 @@
 			max-width: 100%  
 			
 	.table-simple
-		overflow: scroll
+		overflow: auto
 	table
 		width: 100%
 		font-size: 0

@@ -404,7 +404,7 @@ head.ready(function() {
 
 		$('body').on('click', '.js-mover', function() {
 			$('.js-cart i').addClass('is-move');
-			setTimeout("$('.js-cart i').removeClass('is-move')", 600)
+			setTimeout("$('.js-cart i').removeClass('is-move')", 2100)
 
 		});
 		

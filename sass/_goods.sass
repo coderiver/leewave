@@ -328,17 +328,18 @@
 		text-align: center
 		
 +keyframes(cart-move)
-	0%
+	0%, 100%
 		+translate(0,0)
-	25%
-		+translate(0, -5px)
 	50%
-		+translate(0, 5px)
+		+translate(0, -10px)
 	75%
-		+translate(0,0)
+		+translate(0, 10px)
+
 
 .is-move
-	+animation(cart-move linear .7s)
+	+animation(cart-move .7s linear )
+	+animation-iteration-count(3)
+	+animation-delay(0)
 	
 
 

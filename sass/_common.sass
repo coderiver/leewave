@@ -122,6 +122,7 @@ body
 	+pt
 	font-weight: 400
 	background: $light 
+	min-width: 320px
 	&.is-fixed-header
 		.out
 			padding-top: 60px
@@ -191,7 +192,7 @@ body
 	+r(1023)
 		margin-bottom: -487px 
 	+r(767)
-		margin-bottom: -508px
+		margin-bottom: 0
 	&:after
 		content: ""
 		display: block 
@@ -200,7 +201,7 @@ body
 		+r(1023)
 			height: 487px
 		+r(767)
-			height: 508px
+			display: none
 a
 	text-decoration: none
 // common blocks    

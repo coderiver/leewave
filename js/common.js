@@ -1,8 +1,7 @@
 head.ready(function() {
 
 	$(document).on("click", function(){
-		$(".menu").hide();
-		$(".nav").hide();
+		$(".js-menu").removeClass("is-active");
 		$('.js-open-menu').removeClass("is-active");
 		$('.js-search').removeClass("is-active");
 	});

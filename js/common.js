@@ -418,8 +418,8 @@ head.ready(function() {
 		// });
 
 		$('body').on('click', '.js-mover', function() {
-			$('.js-cart i').addClass('is-move');
-			setTimeout("$('.js-cart i').removeClass('is-move')", 2100)
+			$('.js-cart').addClass('is-move');
+			setTimeout("$('.js-cart').removeClass('is-move')", 2100)
 
 		});
 		

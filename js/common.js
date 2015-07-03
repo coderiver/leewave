@@ -120,11 +120,9 @@ head.ready(function() {
 
 	 $('.js-menu').on("click", function(event){
 		 event.stopPropagation();
-		 return false;
 	 });
 	  $('.js-tooltip').on("click", function(event){
 	 	 event.stopPropagation();
-	 	 return false;
 	  });
 
 	$('.js-slider-promo').slick({

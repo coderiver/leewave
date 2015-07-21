@@ -71,11 +71,14 @@
 		// padding: 18px 0 16px 55px  
 	.icon-prev
 		position: absolute
-		left: 20px 
+		left: 8px 
 		top: 50%
-		margin-top: -12px 
+		margin-top: -26px 
 		+r(693)
-			margin-top: -8px
+			left: 2px
+		&:before
+			content: "\e600"
+			font-size: 52px
 	span
 		// display: none
 		visibility: hidden
@@ -331,9 +334,9 @@
 	0%, 100%
 		+translate(0,0)
 	50%
-		+translate(0, -10px)
+		+translate(0, -7px)
 	75%
-		+translate(0, 10px)
+		+translate(0, 7px)
 
 
 .is-move

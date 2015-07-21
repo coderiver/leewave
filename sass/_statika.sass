@@ -15,7 +15,7 @@
 	.article
 		margin-left: -15px 
 		
-	.b-large
+	.article-slider, .table-simple
 		margin: 0 -10%  55px
 		+r(1023)
 			margin: 0 0 35px 
@@ -58,6 +58,11 @@
 			color: #6dbd96
 			border-bottom: 1px dotted #6dbd96
 			font-size: 15px 
+			+transition(color, border, .3s)
+			&:hover
+				color: #42936c
+				border-bottom: 1px dotted #42936c
+				
 	.file__info
 		line-height: 1em 
 		span

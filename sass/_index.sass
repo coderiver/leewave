@@ -337,45 +337,31 @@
 	font-style: normal
 	color: #fff 
 
-.search_form
+.navi-form
 	position: absolute
-	top: 27px
+	top: 34px
 	right: 0
 	z-index: 2
 	width: 40px
-	 
-	max-width: 279px 	
-	height: 45px 
+	max-width: 180px 	
 	+clr
 	overflow: hidden 
 	+tr(width .3s)
 	+r(990)
-		// top: 10px
 		right: 10px
-	.input-text
-		margin-bottom: 0
-		padding-right: 40px
+	.search
+		background-color: #eee 
 		+tr(transform .3s)
 		+translate(100%,0)
-		+r(990)
-			height: 45px
 	.btn-search
 		height: 100%
 		width: 40px
 		text-align: center
-		border-radius: 0 5px 5px 0
-		+tr(background .7s)
-		i
-			+tr(color .7s)
 
 	&.is-active
 		width: 32%
-		min-width: 240px
-		max-width: 279px 	
-		.input-text
+		min-width: 140px
+		max-width: 180px 	
+		.search
 			+translate(0,0)
-		.btn-search
-			background: #3ca773
-			i
-				color: #fff 
 				

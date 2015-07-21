@@ -1,5 +1,10 @@
 $gray-line: #4a4c4a
 .header
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 10
 	background: $dark 
 	.container
 		position: relative
@@ -14,11 +19,6 @@ $gray-line: #4a4c4a
 	.soc
 		margin-left: -15px
 	+r(1023)
-		position: fixed
-		left: 0
-		top: 0
-		right: 0
-		z-index: 10
 		.container
 			min-height: 100px
 		.row

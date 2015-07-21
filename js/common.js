@@ -199,8 +199,8 @@ head.ready(function() {
 	// });
 
 	function fixHeader() {
-		var top = $(document).scrollTop();
-		if (top > 0) {
+		var top = $(window).height();
+		if ($(document).scrollTop() > top) {
 			$("body").addClass("is-fixed-header");
 		}
 		else{
@@ -211,7 +211,9 @@ head.ready(function() {
 	$(window).scroll(function(){
 		fixHeader();
 	});
-	//////////////////
+	$(window).resize(function(){
+		fixHeader();
+	});
 	var configSlider2 = {
 		slidesToShow: 1,
 		dots: false,
@@ -400,7 +402,6 @@ head.ready(function() {
 		$(".js-popup-main").on("click", function(event){
 			event.stopPropagation();
 		});
-		///////////////
 
 		// $('body').on('click', '.js-mover', function() {
 		// 	var position = $('.js-cart').offset();
